@@ -14,7 +14,9 @@
       margin: 1em;
       text-decoration:underline;
       color:green;
-      
+	}
+    p span {
+	    color:blue;
     }
   </style>
 <body>
@@ -189,5 +191,30 @@ span { color:green; }
 
 <h2>3.2 Basic selectors</h2>
 
+<ol>
+
+<li>
+ The <b><i>element selector</i></b> matches elements with the specified element names.<br>
+     Ex: p { color: blue; } selects all p elements.<p><style "margin: 1em";></style><p>
+</li>
+<li>
+    The <b><i>class selector</i></b>, specified with a period character followed by the class name, matches elements that have the specified class name.<br>
+    Ex: .notice { color: blue; } selects all elements with a class="notice" attribute.<p><style "margin: 1em";></style><p>
+</li>
+<li>
+    The <b><i>ID selector</i></b>, specified with a hash character followed by the ID name, matches the element that has the specified ID.<br>
+    Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.<p><style "margin: 1em";></style><p>
+</li>
+<li>
+    The <b><i>descendant selector</i></b>, specified with a selector followed by a space and another selector, matches elements that are contained in other elements.<br>
+    Ex: h2 em { color: blue; } selects em elements contained in h2 elements.<p><style "margin: 1em";></style><p>
+</li>
+<li>
+    The <b><i>pseudo-class selector</i></b>, specified with a colon character followed by a pseudo-class name, matches elements based on user behavior or element metainformation.<br>
+    Ex: :hover { color: blue; } selects elements under the mouse cursor.<p><style "margin: 1em";></style><p>
+</li>
+</ol>
+
+<h2>7.1 Using JavaScript with HTML</h2>
 </body>
 </html>
