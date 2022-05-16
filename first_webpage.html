@@ -18,6 +18,11 @@
     p span {
 	    color:blue;
     }
+    h4 {
+        <b>;
+         color:darkorange;
+        margin:1em;
+       }
   </style>
 <body>
   <h1>2. Intermediate HTML</h1>
@@ -216,5 +221,51 @@ span { color:green; }
 </ol>
 
 <h2>7.1 Using JavaScript with HTML</h2>
+<h3>Basics</h3>
+<p>Web pages add JavaScript code by using the <b>script</b> tag. JavaScript code between <b>script</b><b> /script</b>  tags is executed by the browser's JavaScript engine.<p> 
+</body>
+
+<body>
+<h4>Example: 7.1.1: Writing JavaScript within the body of an HTML file.</h4>
+   <p>Magic 8 Ball</p>
+   <script>
+
+   // Possible 8 Ball responses
+   let responses = [ "Without a doubt", "Ask again later", "Don't count on it", "aaa", "bbb","ccc"];
+
+   // Display a randomly chosen response
+   let randomNum = Math.floor(Math.random() * responses.length);
+   document.writeln("<p>Magic 8 Ball says... <strong>" + responses[randomNum] + "</strong>.</p>");
+
+   </script>   
+</body>
+
+
+<h3>Window object</h3>
+
+<ul>
+  <li>
+    <p><b><i>window.location</b></i> is a location object that contains information about the window's current URL. Ex: window.location.hostname is the URL's hostname.</p>
+  </li>
+  <li> 
+    <p><b><i> window.navigator</b></i> is a navigator object that contains information about the browser. Ex: window.navigator.userAgent returns the browser's user agent string.</p>
+  </li>
+    <li> 
+      <p><b><i>window.innerHeight</b></i> and window.innerWidth are the height and width in pixels of the window's content area. Ex: window.innerWidth returns 600 if the browser's content area is 600 pixels wide.</p>
+  </li>
+
+ The window object defines some useful methods:
+
+  <li>
+   <p><b><i> window.alert()</b></i> displays an alert dialog box. Ex: window.alert("Hello") displays a dialog box with the message "Hello".</p>
+  </li>
+  <li>
+    <p><b><i>  window.confirm() </b></i>displays a confirmation dialog box with OK and Cancel buttons. confirm() returns true if OK is pressed and false if Cancel is pressed. Ex: window.confirm("Are you sure?") displays a dialog box with the question.</p>
+  </li>
+  <li>
+    <p><b><i> window.open() </b></i>opens a new browser window. Ex: window.open("http://www.twitter.com/") opens a new browser that loads the Twitter web page.</p>
+  </li>
+</ul>
+
 </body>
 </html>
