@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<meta charset="UTF-8">
    <head>
       <title>Software Guild Lessons</title>
    </head>
@@ -27,7 +28,57 @@
 <body>
   <h1>2. Intermediate HTML</h1>
 
+  <h2>2.2 Forms</h2>
+    <p><b>GET method</b></p>
+<body>
+  <form action="https://example.com/apply">
+    <label for="first">First Name:</label>
+    <input type="text" name="first" id="first">
+    <label for="last">Last Name:</label>
+    <input type="text" name="last" id="last">
+    <input type="submit">
+  </form>
+
+  <form method="GET" action="http://example.org/">
+   <input type="text" name="item">
+   <input type="text" name="price">
+   <input type="submit">
+  </form>
+
+    <p><b>POST method</b></p>
+
+<body>
+  <form action="https://example.com/apply" method="POST"
+        enctype="multipart/form-data">
+    <label for="first">First Name:</label>
+    <input type="text" name="first" id="first">
+    <label for="last">Last Name:</label>
+    <input type="text" name="last" id="last">
+    <label for="pic">Upload picture:</label>
+    <input type="file" name="pic" id="pic">
+    <input type="submit">
+  </form>
+</body>
+
+</body>
+
+
+
+<h3>Form widgets</h3>
+
+<p>A <b><i>widget</b></i> is an interactive component (usually graphical) that the browser uses to interact with a user. Ex: Buttons, drop-down menus, and data entry fields.</p>
+
+<p>The <b><i>input</b></i> tag allows the user to enter information into a web page. The <b><i>input</b></i> tag cannot enclose any additional page content, and thus does not have a closing tag. The <b><i>input</b></i> tag has five primary attributes:</p>
+<ul>
+   <li> The type attribute indicates the widget type. Common types include text, password, submit, and button.</li>
+   <li> The name attribute names the widget and sends the widget's value when the widget's form is submitted.</li>
+   <li> The id attribute is used to give a widget a unique identifier.</li>
+   <li> The placeholder attribute specifies text that first appears in a text widget, typically for giving the user a hint as to the expected value.</li>
+   <li> The value attribute specifies a default value for a widget.</li>
+</ul>
+
   <h2>2.3 Common form widgets</h2>
+  
   <h3>Checkbox</h3>
 
 <form action="http://example.com/survey">
@@ -62,6 +113,7 @@
    <div>
       <input type="radio" name="restaurants" value="Pizza Hut" id="PH">
       <label for="PH">Pizza Hut</label>
+   </div>
       
    <p>Select your favorite movie:</p>
    
@@ -84,6 +136,7 @@
    <div>
       <input type="radio" name="movies" value="Titanic" id="Titanic">
       <label for="Titanic">Titanic</label>
+   </div>
 
    <p>
       <input type="submit" value="Submit">
@@ -153,7 +206,12 @@
   <label for="other">Other</label>
 </fieldset>
 
+
 <h2>2.4 Additional form widgets</h2>
+<3> Date picker</h3>
+
+
+
 
 <h2>2.6 script and style</h2>
 
@@ -266,6 +324,35 @@ span { color:green; }
     <p><b><i> window.open() </b></i>opens a new browser window. Ex: window.open("http://www.twitter.com/") opens a new browser that loads the Twitter web page.</p>
   </li>
 </ul>
+
+<h3>Using the console</h3>
+<p>Good practice is to leave the console open while writing and testing JavaScript code.</p>
+
+
+<h3>API (Application Programming Interface)</h3>
+
+<p>The console API includes the following methods:</p>
+
+    console.log() displays informational data to the console.
+
+    console.warn() displays warnings to the console. The browser usually has a special indicator to differentiate a warning from the standard log message. Ex: A yellow warning box.
+
+    console.error() displays errors to the console. The browser usually has a special indicator to differentiate an error from a warning or the standard log message. Ex: A red error box.
+
+    console.dir() displays a JavaScript object to the console. The browser usually supports a method for compactly representing the object. Ex: a hierarchical tree representation allowing a developer to expand and collapse the object contents.
+
+
+<h3>Loading JavaScript from an external file</h3>
+
+<p>Good practice is to use <b>script</b> tags to load JavaScript from external files rather than writing the JavaScript directly within the HTML file. The <b>script</b> tag's <b><i>src</i></b> attribute specifies a JavaScript file to load. </p>
+
+
+<h3>Minification and obfuscation</h3>
+
+<p>To reduce the amount of JavaScript that must be downloaded from a web server, developers often minify a website's JavaScript. <b>Minification</b> or <b>minimization</b> is the process of removing unnecessary characters (like whitespace and comments) </p>
+
+
+<p>A JavaScript <b>obfuscator</b> is software that converts JavaScript into an unreadable form that is very difficult to convert back into readable JavaScript. Developers obfuscate a website's JavaScript to prevent the code from being read or re-purposed by others. Obfuscated code may also be minified and appear in a ".min.js" file.</p>
 
 </body>
 </html>
