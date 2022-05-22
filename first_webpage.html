@@ -208,10 +208,106 @@
 
 
 <h2>2.4 Additional form widgets</h2>
-<3> Date picker</h3>
+<h3> Date picker</h3>
+<p>The basic syntax for the date picker is <b>input type="date":</b>Two common attributes for the date input are <i>min</i> (the earliest date permitted) and <i>max</i> (the latest date permitted). </p>
+<input type="date">
 
 
+<h3>Color picker</h3>
+<p>The basic syntax for the color picker is <b>input type="color"</b>.<p> 
+<input type="color">
 
+
+<h3>Number input</h3>
+<p>The basic syntax for the number input is <b>input type="number"</b>. The <i>min</i> and <i>max</i> attributes are commonly used with the number input.<p>
+<input type="number">
+
+
+<h3>Range input</h3>
+<p>The basic syntax for the range input is <b>input type="range"</b>. Three commonly used attributes for the range input are min, max, and value.</p> 
+<input type="range">
+
+
+<h3>Combo box</h3>
+<p>input list="sport":</p>
+
+<input list="sport">
+
+<datalist id="sport">
+   <option value="Baseball">
+   <option value="Basketball">
+   <option value="Football">
+   <option value="Hockey">
+   <option value="Soccer">
+</datalist>
+
+
+<h3>Specialized text input</h3>
+
+Four input types exist for entering specific types of text:
+
+    url - For typing a URL
+    tel - For typing a telephone number
+    email - For typing an email address
+    search - For typing search terms
+
+
+<p>input type="tel" placeholder="(###) ###-####"</p>
+
+<p>input type="email" placeholder="name@domain.com"</p>
+
+<input type="tel" placeholder="(###) ###-####">
+
+<input type="email" placeholder="name@domain.com">
+
+<input type="url" placeholder="www.com">
+
+
+<h3>Input attributes</h3>
+
+<table>
+  <tr>
+	<th>Attribute</th> 
+	<th>Description</th> 	
+	<th>Example</th>
+</tr>
+
+<tr>
+	<td>maxlength</td> 	
+	<td>Sets the maximum number of input characters.</td> 	
+	<td><!-- Only 4 chars max can be entered -->
+	<b>input type="password" maxlength="4"</b></td>
+</tr>
+<tr>
+max
+Sets the maximum value that the input can have. 	
+<!-- Number may not exceed 212 -->
+<b>input type="number" max="212"</b>
+
+
+min 	Sets the minimum value that the input can have. 	
+
+<!-- Date may not be earlier than July 4, 1976 -->
+<input type="date" min="1976-07-04">
+
+pattern 	Provides a pattern (called a regular expression) that the input must match. 	
+
+<!-- Value must be A, B, or C followed by single digit -->
+<input type="text" pattern="[ABC][0-9]">
+
+required 	States that the input is required and must not be left empty. 	
+
+<!-- At least one character must be entered -->
+<input type="password" required>
+
+step 	Sets the amount by which the value can change. 	
+
+<!-- Number is changed by multiples of 5 -->
+<input type="range" step="5">
+
+
+</tr>
+</table>
 
 <h2>2.6 script and style</h2>
 
