@@ -26,9 +26,13 @@
        }
   </style>
 <body>
-  <h1>2. Intermediate HTML</h1>
-<section>
-  <h2>2.2 Forms</h2>
+
+
+
+<h1>2. Intermediate HTML</h1>
+
+
+<h2>2.2 Forms</h2>
 <section>
     <p><b>GET method</b></p>
 <body>
@@ -81,7 +85,7 @@
 
 
 
-<section>
+
   <h2>2.3 Common form widgets</h2>
   <section>
   <h3>Checkbox</h3>
@@ -276,7 +280,7 @@
 
 
 
-<section>
+
 <h2>2.4 Additional form widgets</h2>
 <section>
 <h3> Date picker</h3>
@@ -383,77 +387,6 @@ step 	Sets the amount by which the value can change.
 
 
 
-
-<h2>2.6 script and style</h2>
-<section>
-
-
-
- <style>
-    p {
-      margin: 1em;
-    }
-  </style>
-  <body>
-   <p>The White House is the official residence of the
-      President of the United States.
-    </p>
-
-
-examples:
-
-<h3>Input attributes</h3>
-
-<input type="range"step ="100">
-
-<input type="text"pattern ="[A-F]">
-
-<input type="number" min ="-273.16">
-
-<input type="date" max ="2025-12-31">
-
-<input type="number" required>
-
-
-<h3>Fallbacks and polyfills</h3>
-
-<p>A <b>fallback</b> is a mechanism that allows a web page element to function correctly even if the browser does not support a particular element. Good practice is to implement a fallback mechanism if a particular widget is not widely supported by browsers at the time.</p>
-
-<p>A <b>polyfill</b> is a fallback using JavaScript code that makes certain HTML features (Ex: the date picker) work on browsers that do not natively support those features. Developers often use a JavaScript library such as Modernizr to detect which features the browser does not support, and then load one or more polyfills to provide fallback mechanisms for the non-supported features.</p>
-
-<b>Example 2.4.7: A date polyfill.</b>
-<form>
-  <p>Select an appointment date:</p>
-  <p><input type="date" name="appointmentDate"></p>
-  <p><input type="submit"></p>
-</form>
-
-
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-
-<script>
-$(function() {
-    if (!Modernizr.inputtypes['date']) {
-        $('input[type=date]').datepicker({ 
-            dateFormat: 'mm-dd-yy'
-        });
-    }
-});
-</script>
-
-<form>
-  <p>Select an appointment date:</p>
-  <p><input type="date" name="appointmentDate"></p>
-  <p><input type="submit"></p>
-</form>
-</section>
-
-
-
-
 <h2>2.5 Audio and video</h2>
 <section>
 <h3>Browser plug-ins</h3>
@@ -537,11 +470,72 @@ Change the video ID in the URL to g4hvUvBmoaA and render the web page. A differe
 </iframe>
 </section>
 
-
-
-
 <h2>2.6 script and style</h2>
 <section>
+
+
+
+ <style>
+    p {
+      margin: 1em;
+    }
+  </style>
+  <body>
+   <p>The White House is the official residence of the
+      President of the United States.
+    </p>
+
+
+examples:
+
+<h3>Input attributes</h3>
+
+<input type="range"step ="100">
+
+<input type="text"pattern ="[A-F]">
+
+<input type="number" min ="-273.16">
+
+<input type="date" max ="2025-12-31">
+
+<input type="number" required>
+
+
+<h3>Fallbacks and polyfills</h3>
+
+<p>A <b>fallback</b> is a mechanism that allows a web page element to function correctly even if the browser does not support a particular element. Good practice is to implement a fallback mechanism if a particular widget is not widely supported by browsers at the time.</p>
+
+<p>A <b>polyfill</b> is a fallback using JavaScript code that makes certain HTML features (Ex: the date picker) work on browsers that do not natively support those features. Developers often use a JavaScript library such as Modernizr to detect which features the browser does not support, and then load one or more polyfills to provide fallback mechanisms for the non-supported features.</p>
+
+<b>Example 2.4.7: A date polyfill.</b>
+<form>
+  <p>Select an appointment date:</p>
+  <p><input type="date" name="appointmentDate"></p>
+  <p><input type="submit"></p>
+</form>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+    if (!Modernizr.inputtypes['date']) {
+        $('input[type=date]').datepicker({ 
+            dateFormat: 'mm-dd-yy'
+        });
+    }
+});
+</script>
+
+<form>
+  <p>Select an appointment date:</p>
+  <p><input type="date" name="appointmentDate"></p>
+  <p><input type="submit"></p>
+</form>
+
 
  <style>
     p {
