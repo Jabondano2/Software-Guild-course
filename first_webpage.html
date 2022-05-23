@@ -324,7 +324,271 @@ step 	Sets the amount by which the value can change.
       President of the United States.
     </p>
 
+<p>****Code from home starts *** paste :</p>
+<!-------------------------------------------------------------------------------------------------------------------------------------->
 
+examples:
+
+<h3>Input attributes</h3>
+
+<input type="range"step ="100">
+
+<input type="text"pattern ="[A-F]">
+
+<input type="number" min ="-273.16">
+
+<input type="date" max ="2025-12-31">
+
+<input type="number" required>
+
+
+<h3>Fallbacks and polyfills</h3>
+
+<p>A <b>fallback</b> is a mechanism that allows a web page element to function correctly even if the browser does not support a particular element. Good practice is to implement a fallback mechanism if a particular widget is not widely supported by browsers at the time.</p>
+
+<p>A <b>polyfill</b> is a fallback using JavaScript code that makes certain HTML features (Ex: the date picker) work on browsers that do not natively support those features. Developers often use a JavaScript library such as Modernizr to detect which features the browser does not support, and then load one or more polyfills to provide fallback mechanisms for the non-supported features.</p>
+
+<b>Example 2.4.7: A date polyfill.</b>
+<form>
+  <p>Select an appointment date:</p>
+  <p><input type="date" name="appointmentDate"></p>
+  <p><input type="submit"></p>
+</form>
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+    if (!Modernizr.inputtypes['date']) {
+        $('input[type=date]').datepicker({ 
+            dateFormat: 'mm-dd-yy'
+        });
+    }
+});
+</script>
+
+<form>
+  <p>Select an appointment date:</p>
+  <p><input type="date" name="appointmentDate"></p>
+  <p><input type="submit"></p>
+</form>
+
+<h2>2.5 Audio and video</h2>
+<h3>Browser plug-ins</h3>
+<!-- Embedded Flash -->
+<object type="application/x-shockwave-flash" data="4_colorb1.swf" width="520" height="358">
+  <param name="play" value="true">
+  <param name="menu" value="true">
+  <param name="scale" value="showall">
+</object>
+
+
+
+<h3>Audio element</h3>
+The <b>audio</b> element plays an audio file in a web page. The <source> element is used inside the <b>audio</b> tag to specify an audio file to play. Some common <b>audio</b> attributes include:
+
+<ul>
+<li>autoplay - Boolean attribute that makes the audio begin playing automatically.</li>
+<li>controls - Boolean attribute that displays audio controls for the user to play, pause, and control the volume.</li>
+<li>loop - Boolean attribute that replays the audio upon reaching the end of the audio.</li>
+<li>muted - Boolean attribute that initially mutes the audio.</li><br>
+</ul>
+Note: Some browsers block <b>audio autoplay</b> from autoplaying so users are not jolted with sound when visiting a web page.
+
+
+<h4>PARTICIPATION ACTIVITY 2.5.2: Audio element.<h4>
+<audio controls>
+  <source src="https://resources.zybooks.com/WebProgramming/tyops_vivaldi-meets-hip-hop.mp3">
+Your browser does not support the audio element.
+</audio>
+
+
+
+<h3>Video element</h3>
+
+The <b>video</b> element displays a video in a web page. The <source> element is used in a <b>video</b> tag to specify the name of the video file to play. Some common <b>video</b> attributes include:
+
+<ul>
+<li>autoplay - Boolean attribute that makes the video begin playing automatically.</li>
+<li>controls - Boolean attribute that displays video controls for the user to play, pause, and control the volume.</li>
+<li>loop - Boolean attribute that replays the audio upon reaching the end of the video.</li>
+<li>muted - Boolean attribute that initially mutes the video.</li>
+<li>width - Specifies the pixel width of the video's display area.</li>
+
+</ul>
+
+
+
+<h4>PARTICIPATION ACTIVITY 2.5.4: Playing a video.</h4>
+<video controls muted width="500">
+  <source src="https://resources.zybooks.com/WebProgramming/subway.mp4">
+</video>
+
+
+
+<h3>Showing YouTube videos</h3>
+
+A YouTube video may be embedded in a web page with the <b>iframe</b> element.
+
+
+
+<h4>PARTICIPATION ACTIVITY 2.5.6: Embedding a YouTube video.</h4>
+
+The web page below uses the <b>iframe</b> tag to embed a YouTube video in the web page. The URL of the YouTube web page ends with "7g7kP_Trp0g?rel=0". 7g7kP_Trp0g is the ID assigned to the video when the video was first uploaded to YouTube, and ?rel=0 disables showing related videos when the video finishes.
+
+Click the video to play the video, and the pause button to pause the video.
+
+Add &autoplay=1&mute=1 to the end of the YouTube URL and render the web page. The video should play automatically, but with no sound.
+
+Change the video ID in the URL to g4hvUvBmoaA and render the web page. A different video should display in the iframe.
+
+
+<p>Watch this funny video!</p>
+
+
+
+<iframe width="460" height="250" src="https://www.youtube.com/embed/7g7kP_Trp0g?rel=0">
+</iframe>
+
+<p>Watch this funny video!</p>
+<iframe width="460" height="250" src="https://www.youtube.com/embed/g4hvUvBmoaA?rel=0">
+</iframe>
+
+<h2>2.6 script and style</h2>
+
+
+
+
+ <style>
+    p {
+      margin: 1em;
+    }
+  </style>
+  <body>
+   <p>The White House is the official residence of the
+      President of the United States.
+    </p>
+
+
+<h2>2.7 HTML developer guidelines</h2>
+<p><b>Use closing tags</b></p>
+<p><b>Avoid self-closing tags</b></p>
+<p><b>Use quotes for attributes values</b></p>
+<p><b>Use double quotes</b></p>
+<p><b>Use boolean attributes concisely</b></p>
+
+<input type="checkbox" name="foodPreference" value="vegetarian" checked<br>
+
+<p><select>
+  <option selected>Pick an option below</option>
+  <option>Lions</option>
+  <option>Tigers</option>
+  <option>Bears</option>
+  <option>Oh, my!</option>
+</select></p>
+
+
+<button type="submit" disabled>Submit</button>
+
+
+<p><b>Use lowercase for all tags and attributes</b></p>
+<p><b>Start block elements on new lines </b></p>
+<p><b>Indent nested elements consistently </b></p>
+
+
+
+<p><b>Provide labels and placeholders</b></p>
+Always provide labels and/or placeholders for widgets. Ex:<br>
+<label for="sport">Favorite sport:</label>
+<input type="text" name="favorit" id="sport" placeholder="Favorite sport">
+
+
+
+<p><b>Separate content from presentation and functionality</b></p>
+<p Good practice is to not use embedded or inline CSS and JavaScript.</p>
+
+
+Good practice is to use separate files for CSS and JavaScript instead of placing CSS and JavaScript in the HTML document. Ex: Instead of using the <b>style</b> tags for specifying CSS rules within the HTML document, specify the CSS rules in a separate CSS file, such as theme.css, and import the file using <b>link rel="stylesheet" href="theme.css"</b></p>
+
+
+<p><b>Use CSS for layout</b></p>
+CSS is designed for layout
+
+<p><b>Validate HTML</b></p>
+Good practice is to validate HTML using an HTML validator and revise the HTML to eliminate any errors or warnings.
+
+
+Implementing the guidelines
+The web page below implements the developer guidelines:
+<ul>
+<li>Closing tags like <b>/p</b> and <b>/li</b> are always used.</li>
+<li>Double quotes are used around all attribute values, and boolean attributes like checked are used appropriately.</li>
+<li>All tags and attributes are lowercase, and tags are indented properly.</li>
+<li>Block elements like <b>p</b> and <b>ol</b> start on new lines.</li>
+<li>The form uses labels for all widgets.</li>
+<li>Separate CSS and JavaScript files are imported with <b>link</b> and <b>script</b> tags instead of placing the CSS and JavaScript in the HTML document.</li>
+<li>The <b>table</b> tag is used for displaying tabular data and not for laying out the page contents.</li>	
+</ul>
+
+<h4>Example Website:</h4>
+
+<link rel="stylesheet" href="layout.css">
+  <script src="functions.js"></script>
+  <body>
+    <p>According to the <a href="https://usatoday.com/">USA Today</a>, 
+       the three busiest travel days are:</p>
+    <ol>
+      <li>Summer weekends</li>
+      <li>Thanksgiving</li>
+      <li>Christmas</li>
+    </ol>
+    <p>According to the <a href="https://www.mayoclinic.org">Mayo Clinic</a>, 
+       the following values are typical complete blood count results:</p>
+    <table>
+      <caption>Normal complete blood count results for adults.</caption>
+      <tr>
+        <th>Count</th>
+        <th>Female</th>
+        <th>Male</th>
+      </tr>
+      <tr>
+        <td>Red blood cell</td>
+        <td>3.90-5.03 trillion cells/L</td>
+        <td>4.32-5.72 trillion cells/L</td>
+      </tr>
+      <tr>
+        <td>Hematocrit</td>
+        <td>34.9-44.5%</td>
+        <td>38.8-50.0%</td>
+      </tr>
+    </table>
+    <form action="ignored" method="post">
+      <label for="surname">Surname:</label>
+      <input type="text" name="surname" id="surname" placeholder="Enter your last name.">
+      <label for="promise">I promise to follow the HTML style rules.</label>
+      <input type="checkbox" name="promise" id="promise" checked>
+      <input type="submit">
+    </form>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<p>****Code from home ends*** paste:</p>
+	
+<!-------------------------------------------------------------------------------------------------------------------------------------->
+	
+	
 <h1>3. Basic CSS</h1>
 
 <h2>3.1 Using CSS in HTML</h2>
@@ -374,6 +638,212 @@ span { color:green; }
 </li>
 </ol>
 
+	  
+	  
+	  
+
+<h2>3.3 Advanced selectors</h2>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"><li>"CSS selector reference from W3 Consortium."</li><br>
+
+
+
+<h3>Universal selector</h3>
+
+<h3>Multiple selector</h3>
+
+
+
+<h3>Child selector</h3>
+
+
+<h4>PARTICIPATION ACTIVITY 3.3.3: Matching specific elements.</h4>
+
+<p>James Bond is known to drive the <span class="mfg">Aston Martin</span> DB5.
+Below are a few cars James Bond has driven in recent Bond films according to
+<a href="https://en.wikipedia.org/wiki/List_of_James_Bond_vehicles">Wikipedia</a>.</p>
+
+<ol>
+   <li><cite>Casino Royale</cite> (2006)
+      <ul>
+         <li><span class="mfg">Bentley</span> 4.5 Litre</li>
+         <li><span class="mfg">Aston Martin</span> DB5</li>
+      </ul>
+   </li>
+   <li><cite>Quantum of Solace</cite> (2008)
+      <ul>
+         <li><span class="mfg">Aston Martin</span> DBS V12</li>
+      </ul>
+   </li>
+   <li><cite>Skyfall</cite> (2012)
+      <ul>
+         <li><span class="mfg">Jaguar</span> XJ (X351)</li>
+         <li><span class="mfg">Mercedes</span> S400</li>
+         <li><span class="mfg">Aston Martin</span> DB5</li>
+      </ul>
+   </li>
+   <li><cite>Spectre</cite> (2015)
+      <ul>
+         <li><span class="mfg">Aston Martin</span> DB10</li>
+      </ul>
+   </li>
+</ol>
+
+<h3>Sibling selectors</h3>
+
+
+
+<h4>Figure 3.3.2: General sibling selector. Example</h4>
+<body>
+<style>
+h1 ~ p 
+   border-top: 1px solid gray;
+}
+</style>
+<body>
+<section>
+   <h1>Classifieds</h1>
+   <p>Dog for adoption. Call 555-1234.</p>
+   <p>Guard dog wanted. Call 555-4321.</p>
+</section>
+
+</body>
+
+<h4>Figure 3.3.3: Adjacent sibling selector. Example</h4>
+
+<style>
+h1 + p {
+   border-top: 1px solid orange;
+}
+</style>
+<body>
+<section>
+   <h1>My Book Report</h1>
+   <p>I thoroughly enjoyed this book. The story made me
+   laugh and cry and jump for joy.</p>
+   <p>I recommend this book to anyone who loves to read.</p>
+</section>
+</body>
+</body>
+
+<h3>Attribute selector</h3>
+
+
+
+<h3>Pseudo-element selector</h3>
+
+
+::selection
+  {
+    color: green;
+
+}
+
+
+<h2>3.4 Common properties</h2>
+
+<h3>Color property</h3>
+
+
+
+<style>
+.byname {
+   color: blue;
+}
+.byrgb {
+   color: rgb(0, 255, 0);
+}
+.byhsl {
+   color: hsl(200, 100%, 50%);
+}
+</style>
+<body>
+<p class="byname">The text is blue</p>
+
+<p class="byrgb">The text is green</p>
+
+<p class="byhsl">The text is cyan</p>
+
+
+</body>
+
+
+<h3>Background properties</h3>
+
+<p>Below is the word "Hello" in different languages.</p>
+<ul id="americas" style="background-color: #ffff00">
+   <li id="hola" style="background-image: url('smiley.gif')">Hola</li>
+   <li id="olá" style="background: green url('smiley.gif')">Olá</li>
+</ul>
+<ul id="europe" style="background-image: url('clouds.png');">
+   <li id="salut" style="background: blue">Salut</li>
+   <li id="hej" style="background: red url('smiley.gif')">Hej</li>
+   <li id="bog" style="background: transparent url('smiley.gif')">Bog</li>
+</ul>	
+
+
+<h3>Float property</h3>
+
+<p>CSS properties float and clear control how text flows around HTML elements</p>
+
+
+<h3>Display property</h3>
+
+
+<p>The <b>display</b> property controls the layout of the element on a web page. Values for the display property include:</p>
+
+<ul>
+<li><b>inline</b> - Displays the element as an inline element, like span or a elements.
+<li><b>block</b> - Displays the element as a block element, like p, h1, or div elements.
+<li><b>none</b> - Hides the element from being displayed, like style elements.
+<li><b>inline-block</b> - Displays the contents of the element as a block element, but formats the element as an inline element.
+<li><b>list-item</b> - Displays the contents of the element as a list item element.
+</ul>
+
+<h4>PARTICIPATION ACTIVITY 3.4.7: Display CSS values. Example</h4>
+
+<style>
+.animal {
+   background: yellow;
+   width: 50px;
+   height: 40px;
+   display: block;
+}
+</style>
+
+My favorite breed of
+<span class="animal">cat</span>
+is Russian Blue.
+
+
+
+<h3>CSS variables</h3>
+
+
+
+A <b>CSS variable</b> is a custom CSS property that defines a value. A CSS variable is declared in a CSS selector that defines the variable's scope. A CSS variable can have global scope by declaring the variable in the :root selector, which targets the highest DOM element: the <html> element.
+
+A CSS variable is defined with two dashes preceding the variable name. Ex: --my-variable: red; A CSS variable is accessed with the var() function. Ex: var(--my-variable);
+
+<h4>Example - see code:</h4>
+
+<"style><br>
+
+:root {
+   --main-color: red;<br>
+   --main-bg-color: yellow;<br>
+}
+<br>
+p {<br>
+   color: var(--main-color);<br>
+   background-color: var(--main-bg-color);<br>
+}<br>
+
+<"/style>
+
+<p>The sun rises and sets.</p>
+	
+	
+	
 <h2>7.1 Using JavaScript with HTML</h2>
 <h3>Basics</h3>
 <p>Web pages add JavaScript code by using the <b>script</b> tag. JavaScript code between <b>script</b><b> /script</b>  tags is executed by the browser's JavaScript engine.<p> 
