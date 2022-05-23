@@ -27,8 +27,9 @@
   </style>
 <body>
   <h1>2. Intermediate HTML</h1>
-
+<section>
   <h2>2.2 Forms</h2>
+<section>
     <p><b>GET method</b></p>
 <body>
   <form action="https://example.com/apply">
@@ -76,9 +77,13 @@
    <li> The placeholder attribute specifies text that first appears in a text widget, typically for giving the user a hint as to the expected value.</li>
    <li> The value attribute specifies a default value for a widget.</li>
 </ul>
+</section>
+
+
+
 
   <h2>2.3 Common form widgets</h2>
-  
+  <section>
   <h3>Checkbox</h3>
 
 <form action="http://example.com/survey">
@@ -266,8 +271,14 @@
    </p>
    <p><input type="submit" value="Submit"></p>
 </form>
+</section>
+
+
+
+
 
 <h2>2.4 Additional form widgets</h2>
+<section>
 <h3> Date picker</h3>
 <p>The basic syntax for the date picker is <b>input type="date":</b>Two common attributes for the date input are <i>min</i> (the earliest date permitted) and <i>max</i> (the latest date permitted). </p>
 <input type="date">
@@ -384,8 +395,6 @@ step 	Sets the amount by which the value can change.
       President of the United States.
     </p>
 
-<p>****Code from home starts *** paste :</p>
-<!-------------------------------------------------------------------------------------------------------------------------------------->
 
 examples:
 
@@ -436,8 +445,13 @@ $(function() {
   <p><input type="date" name="appointmentDate"></p>
   <p><input type="submit"></p>
 </form>
+</section>
+
+
+
 
 <h2>2.5 Audio and video</h2>
+<section>
 <h3>Browser plug-ins</h3>
 <!-- Embedded Flash -->
 <object type="application/x-shockwave-flash" data="4_colorb1.swf" width="520" height="358">
@@ -517,11 +531,13 @@ Change the video ID in the URL to g4hvUvBmoaA and render the web page. A differe
 <p>Watch this funny video!</p>
 <iframe width="460" height="250" src="https://www.youtube.com/embed/g4hvUvBmoaA?rel=0">
 </iframe>
+</section>
+
+
+
 
 <h2>2.6 script and style</h2>
-
-
-
+<section
 
  <style>
     p {
@@ -532,9 +548,13 @@ Change the video ID in the URL to g4hvUvBmoaA and render the web page. A differe
    <p>The White House is the official residence of the
       President of the United States.
     </p>
+</section>
+
+
 
 
 <h2>2.7 HTML developer guidelines</h2>
+<section>
 <p><b>Use closing tags</b></p>
 <p><b>Avoid self-closing tags</b></p>
 <p><b>Use quotes for attributes values</b></p>
@@ -638,19 +658,13 @@ The web page below implements the developer guidelines:
 
 
 
+</section>
 
-
-
-
-
-
-<p>****Code from home ends*** paste:</p>
 	
-<!-------------------------------------------------------------------------------------------------------------------------------------->
-	
+
 	
 <h1>3. Basic CSS</h1>
-
+<div>
 <h2>3.1 Using CSS in HTML</h2>
 <h3>Introduction to CSS</h3>
 <style>
@@ -903,8 +917,94 @@ p {<br>
 <p>The sun rises and sets.</p>
 	
 	
-	
+
+
+<h2>3.5 Font and text properties</h2>
+
+<h3>Font properties</h3>
+
+Many CSS properties control the font properties for displaying text. CSS font properties include:
+
+<ul>
+    <li>The <b><i>font-family</b></i> property specifies the font family, such as "Times New Roman" or serif.</li>
+    <li>The <b><i>font-size</b></i> property changes the font size, such as 120%, small, or 12px.</li>
+    <li>The <b><i>font-weight</b></i> property specifies the font weight, such as normal or bold.</li>
+    <li>The <b><i>font-style</b></i> property changes the text style, such as normal, italic, or oblique.</li>
+    <li>The <b><i>font-variant</b></i> property specifies the variant of the text, such as normal or small-caps.</li>
+    <li>The <b><i>font property</b></i> is shorthand for setting several font properties at the same time. Ex: font: italic 12pt Georgia, serif;</li>
+</ul>
+
+<"style>
+p {
+   font-family: "Verdana", "Arial", sans-serif;
+   font-size: 10pt;
+}
+#band {
+   font-style: italic;
+   font-size: 120%;
+}
+#music {
+   font-variant: small-caps;
+}
+<"/style>
+
+<p>
+My favorite band is <span id="band">The Shins</span>, because their 
+<span id="music">music</span> is thought-provoking!
+</p>
+
+<h3>Text properties</h3>
+
+<p>Many CSS properties control how text is displayed. Some common CSS text properties include:</p>
+
+<ul>
+
+<li>    The <b><i>text-align</b></i> property changes the horizontal alignment of text for an element. Possible values are: left, right, center, and justify.</li>
+<li>    The <b><i>text-decoration</b></i> property can add or remove text decorations like underlining or a line-through. Possible values are: overline, line-through, underline, and none.</li>
+<li>    The <b><i>text-transform</b></i> property converts letters to UPPERCASE, lowercase, or Capitalizes Initial Letters. Possible values are: uppercase, lowercase, and capitalize.</li>
+<li>    The <b><i>text-indent</b></i> property specifies the first line's indentation amount.</li>
+<li>    The CSS <b><i>text-decoration:none</b></i> is commonly used to remove the default underline from links.</li>
+
+</ul>
+
+<h4>Challenge activity 3.5.1: Font and text properties. Example#1 </h4>
+
+p {<br>
+font-family:cursive;<br>
+font-weight:lighter;<br>
+}<br>
+
+<h4>Challenge activity 3.5.1: Font and text properties. Example#2</h4>
+
+p {<br>
+   text-align:justify;<br>
+}<br>
+
+
+
+
+<h2>3.6 Box model</h2>
+
+<h3>Box model components</h3>
+
+<p>HTML elements take up space on the web page. The <b><i>box model</b></i> describes the size of each element as a series of nested boxes. The box model is important to understand when considering design and layout.</p>
+<ul>
+    <li><b><i>Content</b></i>: The innermost box contains the content of the element, such as text and images.</li>
+    <li><b><i>Padding</b></i>: The padding box contains the content box and adds a transparent area around the content.</li>
+    <li><b><i>Border</b></i>: The border box contains the padded content and adds an optionally colored area around the padding.</li>
+    <li><b><i>Margin</b></i>: The margin box contains all three boxes and adds a transparent area around the border.</li>
+</ul>
+< <img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_296f2fe4-931f-6dc5-0ea8-1a4666d6694c_3zq5XqNfWNBoMiS4wcuv.png">
+
+</div>
+
+
+
+
+
+ 	
 <h2>7.1 Using JavaScript with HTML</h2>
+<section>
 <h3>Basics</h3>
 <p>Web pages add JavaScript code by using the <b>script</b> tag. JavaScript code between <b>script</b><b> /script</b>  tags is executed by the browser's JavaScript engine.<p> 
 </body>
@@ -979,6 +1079,6 @@ p {<br>
 
 
 <p>A JavaScript <b>obfuscator</b> is software that converts JavaScript into an unreadable form that is very difficult to convert back into readable JavaScript. Developers obfuscate a website's JavaScript to prevent the code from being read or re-purposed by others. Obfuscated code may also be minified and appear in a ".min.js" file.</p>
-
+</section>
 </body>
 </html>
