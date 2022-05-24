@@ -7,22 +7,33 @@
 <style>
     h1 {
 	color:blue;
+	border: 5px solid darkblue;
+	background-color: lightcyan;
+	margin: 40px;
+	padding: 20px;
+	margin-top: 60px;
     }
     h2 {
         color:red;
+	border: 5px solid orange;
+	background-color: khaki;
+	margin: 20px;
+	padding: 10px;
+	margin-top: 60px;
     }
     h3 {
-      margin: 1em;
-      text-decoration:underline;
-      color:green;
+  	margin: 1em;
+ 	text-decoration:underline;
+	color: green;
+	padding: 10px;
 	}
     p span {
-	    color:blue;
+	color: blue;
     }
     h4 {
         <b>;
-         color:darkorange;
-        margin:1em;
+        color: darkorange;
+        margin: 1em;
        }
   </style>
 <body>
@@ -769,13 +780,13 @@ Below are a few cars James Bond has driven in recent Bond films according to
 <h4>Figure 3.3.2: General sibling selector. Example</h4>
 <body>
 <style>
-h1 ~ p 
+h7 ~ p 
    border-top: 1px solid gray;
 }
 </style>
 <body>
 <section>
-   <h1>Classifieds</h1>
+   <h7>Classifieds</h7>
    <p>Dog for adoption. Call 555-1234.</p>
    <p>Guard dog wanted. Call 555-4321.</p>
 </section>
@@ -785,13 +796,13 @@ h1 ~ p
 <h4>Figure 3.3.3: Adjacent sibling selector. Example</h4>
 
 <style>
-h1 + p {
+h7 + p {
    border-top: 1px solid orange;
 }
 </style>
 <body>
 <section>
-   <h1>My Book Report</h1>
+   <h7>My Book Report</h7>
    <p>I thoroughly enjoyed this book. The story made me
    laugh and cry and jump for joy.</p>
    <p>I recommend this book to anyone who loves to read.</p>
@@ -995,11 +1006,255 @@ p {<br>
 </ul>
 < <img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_296f2fe4-931f-6dc5-0ea8-1a4666d6694c_3zq5XqNfWNBoMiS4wcuv.png">
 
+
+
+<p>The CSS properties that control the padding, border, and margin are:</p>
+
+<ul>
+
+<li>    The <b><i>padding</b></i> property specifies the padding thickness. Ex: padding: 5px; creates a 5 pixel padding around the content.</li>
+<li>    The <b><i>border</b></i> property specifies the border's thickness, style, and color. Ex: border: 2px solid blue; creates a solid blue border that is 2 pixels thick.</li>
+<li>    The <b><i>margin</b></i> property specifies the margin thickness. Ex: margin: 10px; creates a 10 pixel margin.</li>
+</ul>
+
+<h4>Participation activity 3.6.1: Box model displayed. </h4>
+
+<style>
+#div3{background-color: red;}
+	#content {
+        	padding: 5px;
+	        border: 5px solid black;
+		}
+</style>
+
+<div id="div3">Before</div>
+<div id="content">Content</div>
+<div id="div3">After</div>
+ 	
+
+
+
+<h3>Box sizing</h3>
+
+<h4>Example 3.6.1: Example with non-uniform margin and padding thickness.</h4>
+<"style><br>
+h5 {<br>
+   margin: 40px 30px;<br> 
+   padding: 20px 50px 40px;<br>
+   background-color: khaki;<br>
+}<br>
+<"/style>
+
+<section>
+<style>
+h5 {
+   margin: 40px 30px; 
+   padding: 20px 50px 40px;
+   background-color: khaki;
+}
+</style>
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_0825a9a9-8110-2d2a-37e7-96276c150c12_3zq5XqNfWNBoMiS4wcuv.png"></p>
+
+<h5>The Box Model</h5>
+</section>
+
+<section>
+
+
+<h4>Example 3.6.2: Example specifying one side of the box.</h4>
+
+
+<"style><br>
+h1 {<br>
+   border-left: 5px solid darkcyan;<br>
+   margin-right: 30px; <br>
+   padding-top: 20px;<br>
+   background-color: lightcyan;<br>
+}<br>
+<"/style><br>
+
+
+
+<style>
+h6 {
+   border-left: 5px solid darkcyan;
+   margin-right: 30px; 
+   padding-top: 20px;
+   background-color: lightcyan;
+}
+</style>
+
+<h6>The Box Model</h6>
+
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_ea63be25-bdb0-5117-91ab-86185223d60e_3zq5XqNfWNBoMiS4wcuv.png"></p>
+
+
+<h3>Content width and height</h3>
+
+<h4>Example 3.6.3: Example using width and height properties.</h4>
+
+
+<style>
+#nopadding {
+   width: 200px;
+   height: 100px;
+   background-color: lightgreen;
+   font-size: 30px;
+}
+
+#padding {
+   padding: 50px;
+   width: 200px;
+   height: 100px;
+   background-color: khaki;
+   font-size: 30px;
+}
+</style>
+
+<div id="nopadding">Controlling the content size</div>
+<div id="padding">Controlling the content size</div>
+
+
+<"style><br>
+#nopadding {<br>
+   width: 200px;<br>
+   height: 100px;<br>
+   background-color: lightgreen;<br>
+   font-size: 30px;<br>
+}<br>
+
+#padding {<br>
+   padding: 50px;<br>
+   width: 200px;<br>
+   height: 100px;<br>
+   background-color: khaki;<br>
+   font-size: 30px;<br>
+}<br>
+<"/style>
+
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_87acb51a-1667-5374-1569-1c08edc7d9dc_3zq5XqNfWNBoMiS4wcuv.png"></p>
+
+
+
+<h3>Border styles</h3>
+
+
+
+<p>The border property combines the border width, style, and color. Each CSS property may also be specified separately:</p>
+<ul>
+<li>
+<li>    The <b><i>border-width</b></i> property specifies the border's width. Ex: border-width: 5px; specifies a border that is 5px thick.</li>
+<li>    The <b><i>border-style</b></i> property specifies the border's style. Ex: border-style: dashed; specifies a border that is dashed.</li>
+<li>    The <b><i>border-color</b></i> property specifies the border's color. Ex: border-color: green; specifies a border that is green.</li>
+</ul>
+
+
+
+
+
+<h3>Margin collapsing and horizontal centering</h3>
+
+<h4>Example 3.6.5: Collapsed margins.</h4>
+
+<style>
+.outer {
+  border: 2px dotted black;
+}
+.inner {
+  margin: 10px;
+  border: 1px solid gray;
+}
+span {
+  margin: 10px;
+  background: lightgray;
+}
+</style>
+<div class="outer">
+  <div class="inner">
+    <span>First</span><span>element</span>
+  </div>
+  <div class="inner">
+    Second element
+  </div>
+</div>
+
+<h4>Example 3.6.6: Horizontal centering.</h4>
+
+<block>
+
+<"style>
+.outer {
+  border: 2px dotted black;
+}
+.inner {
+  margin: auto;
+  width: 100px;
+  border: 1px solid gray;
+}
+<"/style>
+<div class="outer">
+  <div class="inner">
+    Centered content
+  </div>
+  <div class="inner">
+    Second element
+  </div>
+</div>
+
+
+<h2>3.7 Example: Styled band web page</h2>
+
+<h3>Page colors</h3>
+
+
+
+
+
 </section>
 
 
 
- 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>7.1 Using JavaScript with HTML</h2>
 <section>
 <h3>Basics</h3>
