@@ -1377,6 +1377,61 @@ https://www.w3schools.com/css/css3_flexbox.asp
 
 
 
+<h2>4.2 Grid layout</h2>
+
+
+<h3>Grid container and grid items</h3>
+
+<p><b><i>Grid layout</b></i> is a CSS layout mode that divides a web page into a rectangular grid in which to position page elements. Grid layout is ideal for designing two-dimensional web page layouts.</p>
+
+<p>A <b><i>grid container</b></i> is an element that has the CSS property display set to grid to create a block-level grid container or grid-inline to create an inline grid container. Ex: <"div style="display: grid">. A <b><i>grid item</b></i> is a child element of a grid container that is by default placed into a single grid cell.</p>
+
+<p>The <b><i>grid-template-columns</b></i> property defines the grid container's number of columns and optionally the width of each column. Ex: grid-template-columns: 50px 90px auto auto; specifies 4 values that create 4 columns: the first is 50px wide, the second is 90px wide, and the third and fourth columns are automatically sized to fit the remainder of the grid width.</p>
+
+
+
+
+<h3>Controlling the grid container</h3>
+
+
+
+
+The default behavior of a grid container can be modified with various CSS properties:
+<ul>
+<li>    The <b><i>grid-gap</b></i> property defines the gap between each grid column and row. Ex: grid-gap: 10px 20px; puts a 10px gap between each row 20px gap between each column.</li>
+
+<li>    The <b><i>grid-template-rows</b></i> property defines the height of each row. Ex: grid-template-rows: 20px 40px; makes the first row 20px tall and the second row 40px tall.</li>
+
+<li>    The <b><i>justify-content</b></i> property horizontally aligns the grid items inside the grid container using values:
+        start - Aligns grid flush with the grid container's starting edge.
+        end - Aligns grid flush with the grid container's ending edge.
+        center - Aligns grid in the center of the grid container.
+        stretch - Stretches the grid items to fill the grid container width.
+        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
+        space-between - Places equal spacing between grid items with no space on either side of the grid container.
+        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
+<li>    The <b><i>align-content</b></i> property vertically aligns the grid items inside the grid container using values:</li>
+        start - Aligns grid flush with the grid container's starting edge.
+        end - Aligns grid flush with the grid container's ending edge.
+        center - Aligns grid in the center of the grid container.
+        stretch - Stretches the grid items to fill the grid container height.
+        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
+        space-between - Places equal spacing between grid items with no space on either side of the grid container.
+        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
+
+<p>The justify-content and align-content properties have no effect unless the grid width or height is less than the grid container's width or height.</p>
+
+
+
+
+<h3> Controlling grid item placement </h3>
+
+
+
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_17efa2b2-784f-9ba1-0e51-0e9c1728df82_FNmpBh5KvIs4CTadnnqz.png"></p>
+
+
+
 
 
 
