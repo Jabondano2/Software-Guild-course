@@ -38,10 +38,12 @@
        }
 
     a:hover {
-     color: grey;
+   	 color: grey;
 	}
     .nav {
-   text-align: center;
+  	text-align: center;
+	border:  solid orange;
+	
 }
   </style>
 
@@ -1256,18 +1258,122 @@ span {
 <section id="4. Advanced CSS">
 <h1>4. Advanced CSS</h1>
 
+<h2>4.1 Flexbox</h2>
+
+<h3>Fluid layout</h3>
+
+
+<p>CSS is instrumental in creating a page layout that is visually appealing. Many websites use the same layout on every web page for consistency. The layout normally contains the following sections:</p>
+<ul>
+<li>    Header at the top that identifies the website</li>
+<li>    Navigational links at the top or left side that present the main links for navigating the website</li>
+<li>    Various sections that include related content</li>
+<li>    Footer at the bottom that contains contact information, copyright, author name, etc.</li>
+</lu>
+
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_edebb591-9bb9-6894-a6a2-29e4eb385ad1_FNmpBh5KvIs4CTadnnqz.png"></p>
+
+
+
+
+<h3>4.1 Flexbox</h3>
+
+
+<h3>4.1 Flexbox layout</h3>
+
+
+www.w3schools.com/html/html_layout.asp
+
+https://www.w3schools.com/css/css3_flexbox.asp
+
+
+<h4>hallenge activity 4.1.1: Flexbox. #1</h4>
+
+.container {
+
+   display:flex;
+   width: 100px;
+
+}
+.container > div {
+   background-color: lightblue;
+   border: 2px solid blue;
+   padding: 6px;
+}
+
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
 
 
 
 
 
+<h4>hallenge activity 4.1.1: Flexbox. #2</h4>
+
+.container {
+   border: 2px solid lightblue;
+   display: flex;
+   height: 120px;
+   width: 120px;
+
+   flex-direction: column-reverse;
+   justify-content: space-around;
+
+}
+.container > div {
+   background-color: lightblue;
+   border: 2px solid blue;
+   padding: 6px;
+}
 
 
 
+<div class="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
 
 
 
+<h4>hallenge activity 4.1.1: Flexbox. #2</h4>
 
+
+
+.first {
+   flex-basis:50%;
+
+}
+.second {
+   flex-basis: 20%;
+
+}
+.third {
+   flex-basis: 30%
+
+}
+
+.container {
+   display: flex;
+   width: 120px;
+}
+.container > div {
+   background-color: lightblue;
+   border: 2px solid blue;
+   height: 25px;
+}<br>
+
+
+
+<"div class"container"><br>
+  <"div class="first"></div><br>
+  <"div class="second"></div><br>
+  <"div class="third"></div><br>
+<"/div><br>
+  
 
 
 
