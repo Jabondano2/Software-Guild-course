@@ -1,1541 +1,550 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="UTF-8">
-   <head>
-      <title>Software Guild Lessons</title>
-   </head>
-<style>
-    h1 {
-	color:blue;
-	border: 5px solid darkblue;
-	background-color: lightcyan;
-	margin: 40px;
-	padding: 20px;
-	margin-top: 60px;
-	text-align: center;
-    }
-    h2 {
-        color:red;
-	border: 5px solid orange;
-	background-color: khaki;
-	margin: 20px;
-	padding: 10px;
-	margin-top: 60px;
-    }
-    h3 {
-  	margin: 1em;
- 	text-decoration:underline;
-	color: green;
-	padding: 10px;
-	}
-    p span {
-	color: blue;
-    }
-    h4 {
-        <b>;
-        color: darkorange;
-        margin: 1em;
-       }
-
-    a:hover {
-   	 color: grey;
-	}
-    .nav {
-  	text-align: center;
-	border:  solid orange;
-	
-}
-  </style>
-
-
-<body>
-
-<p class="nav">
-<a href="#2. Intermediate HTML">2. Intermediate HTML</a> &nbsp;
-<a href="#3. Basic CSS">3. Basic CSS</a> &nbsp;   
-<a href="#4. Advanced CSS">4. Advanced CSS</a> &nbsp;
-<a href="#5. Mobile Web Development">5. Mobile Web Development</a> &nbsp;
-<a href="#6. Basic JavaScript">6. Basic JavaScript</a> &nbsp;
-<a href="#7. JavaScript in the Browser">7. JavaScript in the Browser</a> &nbsp;
-</p>
-
-
-
-<section id="2. Intermediate HTML">
-<h1>2. Intermediate HTML</h1>
-
-
-<h2>2.2 Forms</h2>
-<section>
-    <p><b>GET method</b></p>
-<body>
-  <form action="https://example.com/apply">
-    <label for="first">First Name:</label>
-    <input type="text" name="first" id="first">
-    <label for="last">Last Name:</label>
-    <input type="text" name="last" id="last">
-    <input type="submit">
-  </form>
-
-  <form method="GET" action="http://example.org/">
-   <input type="text" name="item">
-   <input type="text" name="price">
-   <input type="submit">
-  </form>
-
-    <p><b>POST method</b></p>
-
-<body>
-  <form action="https://example.com/apply" method="POST"
-        enctype="multipart/form-data">
-    <label for="first">First Name:</label>
-    <input type="text" name="first" id="first">
-    <label for="last">Last Name:</label>
-    <input type="text" name="last" id="last">
-    <label for="pic">Upload picture:</label>
-    <input type="file" name="pic" id="pic">
-    <input type="submit">
-  </form>
-</body>
-
-</body>
-
-
-
-<h3>Form widgets</h3>
-
-<p>A <b><i>widget</b></i> is an interactive component (usually graphical) that the browser uses to interact with a user. Ex: Buttons, drop-down menus, and data entry fields.</p>
-
-<p>The <b><i>input</b></i> tag allows the user to enter information into a web page. The <b><i>input</b></i> tag cannot enclose any additional page content, and thus does not have a closing tag. The <b><i>input</b></i> tag has five primary attributes:</p>
-<ul>
-   <li> The type attribute indicates the widget type. Common types include text, password, submit, and button.</li>
-   <li> The name attribute names the widget and sends the widget's value when the widget's form is submitted.</li>
-   <li> The id attribute is used to give a widget a unique identifier.</li>
-   <li> The placeholder attribute specifies text that first appears in a text widget, typically for giving the user a hint as to the expected value.</li>
-   <li> The value attribute specifies a default value for a widget.</li>
-</ul>
-</section>
-
-
-
-
-  <h2>2.3 Common form widgets</h2>
-  <section>
-  <h3>Checkbox</h3>
-
-<form action="http://example.com/survey">
-  <div>
-     <label for="item1">Item 1:</label>
-     <input type="checkbox" name="item1" id="item1">
-  </div>
-  <div>
-     <label for="item2">Item 2:</label>
-     <input type="checkbox" name="item2" id="item2">
-  </div>
-  <div>
-     <label for="item3">Item 3:</label>
-     <input type="checkbox" name="item3" id="item3">
-  </div>
-  <input type="submit">
-</form>
-
-
-
-
-<h3>Radio button</h3>
-
-<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
-   <p>Select your favorite chain restaurant:</p>
-
-   <div>
-      <input type="radio" name="restaurants" value="Subway" id="sub">
-      <label for="sub">Subway</label>
-   </div>
-   <div>
-      <input type="radio" name="restaurants" value="Starbucks" id="starB">
-      <label for="starB">Starbucks</label>
-   </div>
-   <div>
-      <input type="radio" name="restaurants" value="Pizza Hut" id="PH">
-      <label for="PH">Pizza Hut</label>
-   </div>
-      
-   <p>Select your favorite movie:</p>
-   
-   <div>
-      <input type="radio" name="movies" value="Gone with the Wind" id="GwtW">
-      <label for="GwtW"> Gone with the Wind</label>
-   </div>
-   <div>
-      <input type="radio" name="movies" value="Star Wars, Episode IV" id="SWEp5">
-      <label for="SWEp5"> Star Wars, Episode IV</label>
-   </div>
-   <div>
-      <input type="radio" name="movies" value="The Sound of Music" id="TSOM">
-      <label for="TSOM"> The Sound of Music</label>
-   </div>
-   <div>
-      <input type="radio" name="movies" value="E.T.: The Extra-Terrestrial" id="ET">
-      <label for="ET"> E.T.: The Extra-Terrestrial</label>
-   </div>
-   <div>
-      <input type="radio" name="movies" value="Titanic" id="Titanic">
-      <label for="Titanic">Titanic</label>
-   </div>
-
-   <p>
-      <input type="submit" value="Submit">
-   </p>
-</form>
-
-<form>
-  <input type="checkbox" name="check1" checked>
-  <input type="checkbox" name="check2">
-  <input type="radio" name="radio1" value="1" checked>
-  <input type="radio" name="radio2" value="2">
-  <input type="radio" name="radio3" value="3">
-  <input type="submit">
-</form>
-
-
-<h3>Drop-down menu</h3>
-
-<select name="sport">
-  <option value="football">Football</option>
-  <option value="baseball">Baseball</option>
-  <option value="basketball">Basketball</option>
-  <option value="hockey">Hockey</option>
-  <option value="soccer">Soccer</option>
-</select>
-
-
-<h3>List box</h3>
-<select name="flagcolors" size="4" multiple>
-  <option value="red">Red</option>
-  <option value="orange">Orange</option>
-  <option value="yellow">Yellow</option>
-  <option value="green">Green</option>
-  <option value="blue">Blue</option>
-  <option value="purple">Purple</option>
-  <option value="white">White</option>
-  <option value="black">Black</option>
-</select>
-
-
-<h3>Buttons</h3>
-<input type="button" value="Home"> 
-
-<button type="button">
-  <img src="data:image/png;base64,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" alt="home"><br>
-  <strong>Home</strong>
-</button>
-
-
-<h3>Password field</h3>
-<input type="password" name="secret" size="10" maxlength="10">
-
-<h3>Fieldset</h3>
-<fieldset>
-  <legend>Favorite Sitcom</legend>
-
-  <input type="radio" name="sitcom" value="The Office" id="theOffice">
-  <label for="theOffice">The Office</label>
-
-  <input type="radio" name="sitcom" value="Community" id="community">
-  <label for="community">Community</label>
-  
-  <input type="radio" name="sitcom" value="The Big Bang Theory" id="bigBang">
-  <label for="bigBang">The Big Bang Theory</label>
-  
-  <input type="radio" name="sitcom" value="Other" id="other">
-  <label for="other">Other</label>
-</fieldset>
+2. Intermediate HTML   3. Basic CSS   4. Advanced CSS   5. Mobile Web Development   6. Basic JavaScript   7. JavaScript in the Browser  
 
-<h4> Challenge activity - 2.3.1: Building common widgets.#1 </h4>
+2. Intermediate HTML
+2.2 Forms
+GET method
 
-<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
+First Name: 
+ Last Name: 
+ 
+ 
+ 
+POST method
 
-   <p>
-      <label for="cat">Like cats?</label>
-      <input type="checkbox" name="cat" id="cat">
-   </p>
+First Name: 
+ Last Name: 
+ Upload picture: No file chosen 
+Form widgets
+A widget is an interactive component (usually graphical) that the browser uses to interact with a user. Ex: Buttons, drop-down menus, and data entry fields.
 
-   <p>
-      <label for="dog">Like dogs?</label>
-      <input type="checkbox" name="dog" id="dog" checked>
-   </p>
+The input tag allows the user to enter information into a web page. The input tag cannot enclose any additional page content, and thus does not have a closing tag. The input tag has five primary attributes:
 
+The type attribute indicates the widget type. Common types include text, password, submit, and button.
+The name attribute names the widget and sends the widget's value when the widget's form is submitted.
+The id attribute is used to give a widget a unique identifier.
+The placeholder attribute specifies text that first appears in a text widget, typically for giving the user a hint as to the expected value.
+The value attribute specifies a default value for a widget.
+2.3 Common form widgets
+Checkbox
+Item 1: 
+Item 2: 
+Item 3: 
+Radio button
+Select your favorite chain restaurant:
 
-   <p><input type="submit" value="Submit"></p>
-</form>
+ Subway
+ Starbucks
+ Pizza Hut
+Select your favorite movie:
 
-<h4> Challenge activity - 2.3.1: Building common widgets. #2</h4>
+ Gone with the Wind
+ Star Wars, Episode IV
+ The Sound of Music
+ E.T.: The Extra-Terrestrial
+ Titanic
 
-<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="POST">
-   <p>Select your preferred shirt color:</p>
-   <p><input type="radio" name="color" value="Yellow" id="yellow"><label for="yellow">Yellow</label></p>
-   <p><input type="radio" name="color" value="Green" id="green"><label for="green">Green</label></p>
-   <p><input type="radio" name="color" value="Black" id="black"><label for="black">Black</label></p>
-   <p><input type="submit" value="Submit"></p>
-</form>
+     
+Drop-down menu
 
+Football
+List box
+RedOrangeYellowGreenBluePurpleWhiteBlack
+Buttons
+ home
+Home
+Password field
+Fieldset
+Favorite Sitcom
+ The Office  Community  The Big Bang Theory  Other
+Challenge activity - 2.3.1: Building common widgets.#1
+Like cats? 
 
+Like dogs? 
 
-<h4> Challenge activity - 2.3.1: Building common widgets. #3</h4>
 
-<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="POST">
-   <p>
-     <select name="majors">
-      <option value="Physics">Physics</option>
-      <option value="Entomology">Entomology</option>
-      <option value="Chemistry">Chemistry</option>
-      </select>
-   </p>
+Challenge activity - 2.3.1: Building common widgets. #2
+Select your preferred shirt color:
 
-   <p><input type="submit" value="Submit"></p>
-</form>
+Yellow
 
-<h4> Challenge activity - 2.3.1: Building common widgets. #4</h4>
+Green
 
-<form action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="POST">
-   <p>
-      <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Your username">
-   </p>
-   <p>
-   <label for="secret">Password</label>
-   <input type="password" id="secret" name="secret" size="11" maxlength="11">
-   </p>
-   <p><input type="submit" value="Submit"></p>
-</form>
-</section>
+Black
 
 
+Challenge activity - 2.3.1: Building common widgets. #3
 
+Physics
 
 
-<h2>2.4 Additional form widgets</h2>
-<section>
-<h3> Date picker</h3>
-<p>The basic syntax for the date picker is <b>input type="date":</b>Two common attributes for the date input are <i>min</i> (the earliest date permitted) and <i>max</i> (the latest date permitted). </p>
-<input type="date">
+Challenge activity - 2.3.1: Building common widgets. #4
+Username 
+Your username
 
+Password 
 
-<h3>Color picker</h3>
-<p>The basic syntax for the color picker is <b>input type="color"</b>.<p> 
-<input type="color">
 
+2.4 Additional form widgets
+Date picker
+The basic syntax for the date picker is input type="date":Two common attributes for the date input are min (the earliest date permitted) and max (the latest date permitted).
 
-<h3>Number input</h3>
-<p>The basic syntax for the number input is <b>input type="number"</b>. The <i>min</i> and <i>max</i> attributes are commonly used with the number input.<p>
-<input type="number">
 
+dd/mm/yyyy
+Color picker
+The basic syntax for the color picker is input type="color".
 
-<h3>Range input</h3>
-<p>The basic syntax for the range input is <b>input type="range"</b>. Three commonly used attributes for the range input are min, max, and value.</p> 
-<input type="range">
 
 
-<h3>Combo box</h3>
-<p>input list="sport":</p>
+Number input
+The basic syntax for the number input is input type="number". The min and max attributes are commonly used with the number input.
 
-<input list="sport">
 
-<datalist id="sport">
-   <option value="Baseball">
-   <option value="Basketball">
-   <option value="Football">
-   <option value="Hockey">
-   <option value="Soccer">
-</datalist>
-
-
-<h3>Specialized text input</h3>
-
-Four input types exist for entering specific types of text:
-
-    url - For typing a URL
-    tel - For typing a telephone number
-    email - For typing an email address
-    search - For typing search terms
-
-
-<p>input type="tel" placeholder="(###) ###-####"</p>
-
-<p>input type="email" placeholder="name@domain.com"</p>
-
-<input type="tel" placeholder="(###) ###-####">
-
-<input type="email" placeholder="name@domain.com">
-
-<input type="url" placeholder="www.com">
-
-
-<h3>Input attributes</h3>
-
-<table>
-  <tr>
-	<th>Attribute</th> 
-	<th>Description</th> 	
-	<th>Example</th>
-</tr>
-
-<tr>
-	<td>maxlength</td> 	
-	<td>Sets the maximum number of input characters.</td> 	
-	<td><!-- Only 4 chars max can be entered -->
-	<b>input type="password" maxlength="4"</b></td>
-</tr>
-<tr>
-max
-Sets the maximum value that the input can have. 	
-<!-- Number may not exceed 212 -->
-<b>input type="number" max="212"</b>
-
-
-min 	Sets the minimum value that the input can have. 	
-
-<!-- Date may not be earlier than July 4, 1976 -->
-<input type="date" min="1976-07-04">
-
-pattern 	Provides a pattern (called a regular expression) that the input must match. 	
-
-<!-- Value must be A, B, or C followed by single digit -->
-<input type="text" pattern="[ABC][0-9]">
-
-required 	States that the input is required and must not be left empty. 	
-
-<!-- At least one character must be entered -->
-<input type="password" required>
-
-step 	Sets the amount by which the value can change. 	
-
-<!-- Number is changed by multiples of 5 -->
-<input type="range" step="5">
-
-
-</tr>
-</table>
-</section>
-
-
-
-<h2>2.5 Audio and video</h2>
-<section>
-<h3>Browser plug-ins</h3>
-<!-- Embedded Flash -->
-<object type="application/x-shockwave-flash" data="4_colorb1.swf" width="520" height="358">
-  <param name="play" value="true">
-  <param name="menu" value="true">
-  <param name="scale" value="showall">
-</object>
-
-
-
-<h3>Audio element</h3>
-The <b>audio</b> element plays an audio file in a web page. The <source> element is used inside the <b>audio</b> tag to specify an audio file to play. Some common <b>audio</b> attributes include:
-
-<ul>
-<li>autoplay - Boolean attribute that makes the audio begin playing automatically.</li>
-<li>controls - Boolean attribute that displays audio controls for the user to play, pause, and control the volume.</li>
-<li>loop - Boolean attribute that replays the audio upon reaching the end of the audio.</li>
-<li>muted - Boolean attribute that initially mutes the audio.</li><br>
-</ul>
-Note: Some browsers block <b>audio autoplay</b> from autoplaying so users are not jolted with sound when visiting a web page.
-
-
-<h4>PARTICIPATION ACTIVITY 2.5.2: Audio element.<h4>
-<audio controls>
-  <source src="https://resources.zybooks.com/WebProgramming/tyops_vivaldi-meets-hip-hop.mp3">
-Your browser does not support the audio element.
-</audio>
-
-
-
-<h3>Video element</h3>
-
-The <b>video</b> element displays a video in a web page. The <source> element is used in a <b>video</b> tag to specify the name of the video file to play. Some common <b>video</b> attributes include:
-
-<ul>
-<li>autoplay - Boolean attribute that makes the video begin playing automatically.</li>
-<li>controls - Boolean attribute that displays video controls for the user to play, pause, and control the volume.</li>
-<li>loop - Boolean attribute that replays the audio upon reaching the end of the video.</li>
-<li>muted - Boolean attribute that initially mutes the video.</li>
-<li>width - Specifies the pixel width of the video's display area.</li>
-
-</ul>
-
-
-
-<h4>PARTICIPATION ACTIVITY 2.5.4: Playing a video.</h4>
-<video controls muted width="500">
-  <source src="https://resources.zybooks.com/WebProgramming/subway.mp4">
-</video>
-
-
-
-<h3>Showing YouTube videos</h3>
-
-A YouTube video may be embedded in a web page with the <b>iframe</b> element.
-
-
-
-<h4>PARTICIPATION ACTIVITY 2.5.6: Embedding a YouTube video.</h4>
-
-The web page below uses the <b>iframe</b> tag to embed a YouTube video in the web page. The URL of the YouTube web page ends with "7g7kP_Trp0g?rel=0". 7g7kP_Trp0g is the ID assigned to the video when the video was first uploaded to YouTube, and ?rel=0 disables showing related videos when the video finishes.
-
-Click the video to play the video, and the pause button to pause the video.
-
-Add &autoplay=1&mute=1 to the end of the YouTube URL and render the web page. The video should play automatically, but with no sound.
-
-Change the video ID in the URL to g4hvUvBmoaA and render the web page. A different video should display in the iframe.
-
-
-<p>Watch this funny video!</p>
-
-
-
-<iframe width="460" height="250" src="https://www.youtube.com/embed/7g7kP_Trp0g?rel=0">
-</iframe>
-
-<p>Watch this funny video!</p>
-<iframe width="460" height="250" src="https://www.youtube.com/embed/g4hvUvBmoaA?rel=0">
-</iframe>
-</section>
-
-<h2>2.6 script and style</h2>
-<section>
-
-
-
- <style>
-    p {
-      margin: 1em;
-    }
-  </style>
-  <body>
-   <p>The White House is the official residence of the
-      President of the United States.
-    </p>
-
+Range input
+The basic syntax for the range input is input type="range". Three commonly used attributes for the range input are min, max, and value.
+
+
+Combo box
+input list="sport":
+
+Specialized text input
+Four input types exist for entering specific types of text: url - For typing a URL tel - For typing a telephone number email - For typing an email address search - For typing search terms
+input type="tel" placeholder="(###) ###-####"
+
+input type="email" placeholder="name@domain.com"
+
+(###) ###-####
+ 
+name@domain.com
+ 
+www.com
+Input attributes
+Attribute	Description	Example
+maxlength	Sets the maximum number of input characters.	<!-- Only 4 chars max can be entered --> <input type="password" maxlength="4">
+max	Sets the maximum value that the input can have.	<!-- Number may not exceed 212 --> <input type="number" max="212">
+min	Sets the minimum value that the input can have.	<!-- Date may not be earlier than July 4, 1976 --> <input type="date" min="1976-07-04">
+pattern	Provides a pattern (called a regular expression) that the input must match.	<!-- Value must be A, B, or C followed by single digit --< <input type="text" pattern="[ABC][0-9]"<
+required	States that the input is required and must not be left empty.	<!-- At least one character must be entered --> <input type="password" required>
+step	Sets the amount by which the value can change.	<!-- Number is changed by multiples of 5 --> <input type="range" step="5">
+2.5 Audio and video
+Browser plug-ins
+
+Audio element
+The audio element plays an audio file in a web page. The element is used inside the audio tag to specify an audio file to play. Some common audio attributes include:
+autoplay - Boolean attribute that makes the audio begin playing automatically.
+controls - Boolean attribute that displays audio controls for the user to play, pause, and control the volume.
+loop - Boolean attribute that replays the audio upon reaching the end of the audio.
+muted - Boolean attribute that initially mutes the audio.
+
+Note: Some browsers block audio autoplay from autoplaying so users are not jolted with sound when visiting a web page.
+PARTICIPATION ACTIVITY 2.5.2: Audio element.
+Video element
+The video element displays a video in a web page. The element is used in a video tag to specify the name of the video file to play. Some common video attributes include:
+autoplay - Boolean attribute that makes the video begin playing automatically.
+controls - Boolean attribute that displays video controls for the user to play, pause, and control the volume.
+loop - Boolean attribute that replays the audio upon reaching the end of the video.
+muted - Boolean attribute that initially mutes the video.
+width - Specifies the pixel width of the video's display area.
+PARTICIPATION ACTIVITY 2.5.4: Playing a video.
+Showing YouTube videos
+A YouTube video may be embedded in a web page with the iframe element.
+PARTICIPATION ACTIVITY 2.5.6: Embedding a YouTube video.
+The web page below uses the iframe tag to embed a YouTube video in the web page. The URL of the YouTube web page ends with "7g7kP_Trp0g?rel=0". 7g7kP_Trp0g is the ID assigned to the video when the video was first uploaded to YouTube, and ?rel=0 disables showing related videos when the video finishes. Click the video to play the video, and the pause button to pause the video. Add &autoplay=1&mute=1 to the end of the YouTube URL and render the web page. The video should play automatically, but with no sound. Change the video ID in the URL to g4hvUvBmoaA and render the web page. A different video should display in the iframe.
+Watch this funny video!
+
+
+Watch this funny video!
+
+
+2.6 script and style
+The White House is the official residence of the President of the United States.
 
 examples:
+Input attributes
 
-<h3>Input attributes</h3>
+ 
+ 
+ 
+dd/mm/yyyy
+ 
+Fallbacks and polyfills
+A fallback is a mechanism that allows a web page element to function correctly even if the browser does not support a particular element. Good practice is to implement a fallback mechanism if a particular widget is not widely supported by browsers at the time.
 
-<input type="range"step ="100">
+A polyfill is a fallback using JavaScript code that makes certain HTML features (Ex: the date picker) work on browsers that do not natively support those features. Developers often use a JavaScript library such as Modernizr to detect which features the browser does not support, and then load one or more polyfills to provide fallback mechanisms for the non-supported features.
 
-<input type="text"pattern ="[A-F]">
-
-<input type="number" min ="-273.16">
-
-<input type="date" max ="2025-12-31">
-
-<input type="number" required>
-
-
-<h3>Fallbacks and polyfills</h3>
-
-<p>A <b>fallback</b> is a mechanism that allows a web page element to function correctly even if the browser does not support a particular element. Good practice is to implement a fallback mechanism if a particular widget is not widely supported by browsers at the time.</p>
-
-<p>A <b>polyfill</b> is a fallback using JavaScript code that makes certain HTML features (Ex: the date picker) work on browsers that do not natively support those features. Developers often use a JavaScript library such as Modernizr to detect which features the browser does not support, and then load one or more polyfills to provide fallback mechanisms for the non-supported features.</p>
-
-<b>Example 2.4.7: A date polyfill.</b>
-<form>
-  <p>Select an appointment date:</p>
-  <p><input type="date" name="appointmentDate"></p>
-  <p><input type="submit"></p>
-</form>
+Example 2.4.7: A date polyfill.
+Select an appointment date:
 
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
-
-<script>
-$(function() {
-    if (!Modernizr.inputtypes['date']) {
-        $('input[type=date]').datepicker({ 
-            dateFormat: 'mm-dd-yy'
-        });
-    }
-});
-</script>
-
-<form>
-  <p>Select an appointment date:</p>
-  <p><input type="date" name="appointmentDate"></p>
-  <p><input type="submit"></p>
-</form>
+dd/mm/yyyy
 
 
- <style>
-    p {
-      margin: 1em;
-    }
-  </style>
-  <body>
-   <p>The White House is the official residence of the
-      President of the United States.
-    </p>
-</section>
+Select an appointment date:
+
+
+dd/mm/yyyy
+
+
+The White House is the official residence of the President of the United States.
+
+2.7 HTML developer guidelines
+Use closing tags
+
+Avoid self-closing tags
+
+Use quotes for attributes values
+
+Use double quotes
+
+Use boolean attributes concisely
 
 
 
+Pick an option below
 
-<h2>2.7 HTML developer guidelines</h2>
-<section>
-<p><b>Use closing tags</b></p>
-<p><b>Avoid self-closing tags</b></p>
-<p><b>Use quotes for attributes values</b></p>
-<p><b>Use double quotes</b></p>
-<p><b>Use boolean attributes concisely</b></p>
+Submit
+Use lowercase for all tags and attributes
 
-<input type="checkbox" name="foodPreference" value="vegetarian" checked<br>
+Start block elements on new lines
 
-<p><select>
-  <option selected>Pick an option below</option>
-  <option>Lions</option>
-  <option>Tigers</option>
-  <option>Bears</option>
-  <option>Oh, my!</option>
+Indent nested elements consistently
 
-</select></p>
+Provide labels and placeholders
 
+Always provide labels and/or placeholders for widgets. Ex:
+Favorite sport: 
+Favorite sport
+Separate content from presentation and functionality
 
-<button type="submit" disabled>Submit</button>
+Good practice is to use separate files for CSS and JavaScript instead of placing CSS and JavaScript in the HTML document. Ex: Instead of using the style tags for specifying CSS rules within the HTML document, specify the CSS rules in a separate CSS file, such as theme.css, and import the file using link rel="stylesheet" href="theme.css"
 
+Use CSS for layout
 
-<p><b>Use lowercase for all tags and attributes</b></p>
-<p><b>Start block elements on new lines </b></p>
-<p><b>Indent nested elements consistently </b></p>
-
-
-
-<p><b>Provide labels and placeholders</b></p>
-Always provide labels and/or placeholders for widgets. Ex:<br>
-<label for="sport">Favorite sport:</label>
-<input type="text" name="favorit" id="sport" placeholder="Favorite sport">
-
-
-
-<p><b>Separate content from presentation and functionality</b></p>
-<p Good practice is to not use embedded or inline CSS and JavaScript.</p>
-
-
-Good practice is to use separate files for CSS and JavaScript instead of placing CSS and JavaScript in the HTML document. Ex: Instead of using the <b>style</b> tags for specifying CSS rules within the HTML document, specify the CSS rules in a separate CSS file, such as theme.css, and import the file using <b>link rel="stylesheet" href="theme.css"</b></p>
-
-
-<p><b>Use CSS for layout</b></p>
 CSS is designed for layout
+Validate HTML
 
-<p><b>Validate HTML</b></p>
-Good practice is to validate HTML using an HTML validator and revise the HTML to eliminate any errors or warnings.
+Good practice is to validate HTML using an HTML validator and revise the HTML to eliminate any errors or warnings. Implementing the guidelines The web page below implements the developer guidelines:
+Closing tags like /p and /li are always used.
+Double quotes are used around all attribute values, and boolean attributes like checked are used appropriately.
+All tags and attributes are lowercase, and tags are indented properly.
+Block elements like p and ol start on new lines.
+The form uses labels for all widgets.
+Separate CSS and JavaScript files are imported with link and script tags instead of placing the CSS and JavaScript in the HTML document.
+The table tag is used for displaying tabular data and not for laying out the page contents.
+Example Website:
+According to the USA Today, the three busiest travel days are:
 
+Summer weekends
+Thanksgiving
+Christmas
+According to the Mayo Clinic, the following values are typical complete blood count results:
 
-Implementing the guidelines
-The web page below implements the developer guidelines:
-<ul>
-<li>Closing tags like <b>/p</b> and <b>/li</b> are always used.</li>
-<li>Double quotes are used around all attribute values, and boolean attributes like checked are used appropriately.</li>
-<li>All tags and attributes are lowercase, and tags are indented properly.</li>
-<li>Block elements like <b>p</b> and <b>ol</b> start on new lines.</li>
-<li>The form uses labels for all widgets.</li>
-<li>Separate CSS and JavaScript files are imported with <b>link</b> and <b>script</b> tags instead of placing the CSS and JavaScript in the HTML document.</li>
-<li>The <b>table</b> tag is used for displaying tabular data and not for laying out the page contents.</li>	
-</ul>
+Normal complete blood count results for adults.
+Count	Female	Male
+Red blood cell	3.90-5.03 trillion cells/L	4.32-5.72 trillion cells/L
+Hematocrit	34.9-44.5%	38.8-50.0%
+Surname: 
+Enter your last name.
+ I promise to follow the HTML style rules.  
+3. Basic CSS
+3.1 Using CSS in HTML
+Introduction to CSS
+Part of this sentence is black, while the rest is green.
 
-<h4>Example Website:</h4>
+Part of this sentence is black, while the rest is blue.
 
-<link rel="stylesheet" href="layout.css">
-  <script src="functions.js"></script>
-  <body>
-    <p>According to the <a href="https://usatoday.com/">USA Today</a>, 
-       the three busiest travel days are:</p>
-    <ol>
-      <li>Summer weekends</li>
-      <li>Thanksgiving</li>
-      <li>Christmas</li>
-    </ol>
-    <p>According to the <a href="https://www.mayoclinic.org">Mayo Clinic</a>, 
-       the following values are typical complete blood count results:</p>
-    <table>
-      <caption>Normal complete blood count results for adults.</caption>
-      <tr>
-        <th>Count</th>
-        <th>Female</th>
-        <th>Male</th>
-      </tr>
-      <tr>
-        <td>Red blood cell</td>
-        <td>3.90-5.03 trillion cells/L</td>
-        <td>4.32-5.72 trillion cells/L</td>
-      </tr>
-      <tr>
-        <td>Hematocrit</td>
-        <td>34.9-44.5%</td>
-        <td>38.8-50.0%</td>
-      </tr>
-    </table>
-    <form action="ignored" method="post">
-      <label for="surname">Surname:</label>
-      <input type="text" name="surname" id="surname" placeholder="Enter your last name.">
-      <label for="promise">I promise to follow the HTML style rules.</label>
-      <input type="checkbox" name="promise" id="promise" checked>
-      <input type="submit">
-    </form>
-  </body>
-</html>
-</section>
+This sentence is red.
 
-	
+3.2 Basic selectors
+The element selector matches elements with the specified element names.
+Ex: p { color: blue; } selects all p elements.
+The class selector, specified with a period character followed by the class name, matches elements that have the specified class name.
+Ex: .notice { color: blue; } selects all elements with a class="notice" attribute.
+The ID selector, specified with a hash character followed by the ID name, matches the element that has the specified ID.
+Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.
+The descendant selector, specified with a selector followed by a space and another selector, matches elements that are contained in other elements.
+Ex: h2 em { color: blue; } selects em elements contained in h2 elements.
+The pseudo-class selector, specified with a colon character followed by a pseudo-class name, matches elements based on user behavior or element metainformation.
+Ex: :hover { color: blue; } selects elements under the mouse cursor.
+3.3 Advanced selectors
+"CSS selector reference from W3 Consortium."
 
+Universal selector
+Multiple selector
+Child selector
+PARTICIPATION ACTIVITY 3.3.3: Matching specific elements.
+James Bond is known to drive the Aston Martin DB5. Below are a few cars James Bond has driven in recent Bond films according to Wikipedia.
 
-<section id="3. Basic CSS">	
-<h1>3. Basic CSS</h1>
+Casino Royale (2006)
+Bentley 4.5 Litre
+Aston Martin DB5
+Quantum of Solace (2008)
+Aston Martin DBS V12
+Skyfall (2012)
+Jaguar XJ (X351)
+Mercedes S400
+Aston Martin DB5
+Spectre (2015)
+Aston Martin DB10
+Sibling selectors
+Figure 3.3.2: General sibling selector. Example
+Classifieds
+Dog for adoption. Call 555-1234.
 
-<h2>3.1 Using CSS in HTML</h2>
-<section>
-<h3>Introduction to CSS</h3>
-<style>
-p    { color:black; }
-span { color:green; }
-</style>
+Guard dog wanted. Call 555-4321.
 
-<p>
-   Part of this sentence is black, 
-   <span>while the rest is green.</span>
-</p>
-<p>
-   Part of this sentence is black, 
-   <span style="color:blue">while the rest 
-   is blue.</span>
-</p>
-<p style="color:red">
-   This sentence is red.
-</p>
-</section>
+Figure 3.3.3: Adjacent sibling selector. Example
+My Book Report
+I thoroughly enjoyed this book. The story made me laugh and cry and jump for joy.
 
+I recommend this book to anyone who loves to read.
 
+Attribute selector
+Pseudo-element selector
+::selection { color: green; }
+3.4 Common properties
+Color property
+The text is blue
 
-<h2>3.2 Basic selectors</h2>
-<section>
-<ol>
+The text is green
 
-<li>
- The <b><i>element selector</i></b> matches elements with the specified element names.<br>
-     Ex: p { color: blue; } selects all p elements.<p><style "margin: 1em";></style><p>
-</li>
-<li>
-    The <b><i>class selector</i></b>, specified with a period character followed by the class name, matches elements that have the specified class name.<br>
-    Ex: .notice { color: blue; } selects all elements with a class="notice" attribute.<p><style "margin: 1em";></style><p>
-</li>
-<li>
-    The <b><i>ID selector</i></b>, specified with a hash character followed by the ID name, matches the element that has the specified ID.<br>
-    Ex: #byLine { color: blue; } selects the element with the id="byLine" attribute.<p><style "margin: 1em";></style><p>
-</li>
-<li>
-    The <b><i>descendant selector</i></b>, specified with a selector followed by a space and another selector, matches elements that are contained in other elements.<br>
-    Ex: h2 em { color: blue; } selects em elements contained in h2 elements.<p><style "margin: 1em";></style><p>
-</li>
-<li>
-    The <b><i>pseudo-class selector</i></b>, specified with a colon character followed by a pseudo-class name, matches elements based on user behavior or element metainformation.<br>
-    Ex: :hover { color: blue; } selects elements under the mouse cursor.<p><style "margin: 1em";></style><p>
-</li>
-</ol>
-<section>
-	  
-	  
-	  
+The text is cyan
 
-<h2>3.3 Advanced selectors</h2>
-</section>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"><li>"CSS selector reference from W3 Consortium."</li><br>
+Background properties
+Below is the word "Hello" in different languages.
 
+Hola
+Olá
+Salut
+Hej
+Bog
+Float property
+CSS properties float and clear control how text flows around HTML elements
 
+Display property
+The display property controls the layout of the element on a web page. Values for the display property include:
 
-<h3>Universal selector</h3>
-
-<h3>Multiple selector</h3>
-
-
-
-<h3>Child selector</h3>
-
-
-<h4>PARTICIPATION ACTIVITY 3.3.3: Matching specific elements.</h4>
-
-<p>James Bond is known to drive the <span class="mfg">Aston Martin</span> DB5.
-Below are a few cars James Bond has driven in recent Bond films according to
-<a href="https://en.wikipedia.org/wiki/List_of_James_Bond_vehicles">Wikipedia</a>.</p>
-
-<ol>
-   <li><cite>Casino Royale</cite> (2006)
-      <ul>
-         <li><span class="mfg">Bentley</span> 4.5 Litre</li>
-         <li><span class="mfg">Aston Martin</span> DB5</li>
-      </ul>
-   </li>
-   <li><cite>Quantum of Solace</cite> (2008)
-      <ul>
-         <li><span class="mfg">Aston Martin</span> DBS V12</li>
-      </ul>
-   </li>
-   <li><cite>Skyfall</cite> (2012)
-      <ul>
-         <li><span class="mfg">Jaguar</span> XJ (X351)</li>
-         <li><span class="mfg">Mercedes</span> S400</li>
-         <li><span class="mfg">Aston Martin</span> DB5</li>
-      </ul>
-   </li>
-   <li><cite>Spectre</cite> (2015)
-      <ul>
-         <li><span class="mfg">Aston Martin</span> DB10</li>
-      </ul>
-   </li>
-</ol>
-
-<h3>Sibling selectors</h3>
-
-
-<h4>Figure 3.3.2: General sibling selector. Example</h4>
-<body>
-<style>
-h7 ~ p 
-   border-top: 1px solid gray;
-}
-</style>
-<body>
-<section>
-   <h7>Classifieds</h7>
-   <p>Dog for adoption. Call 555-1234.</p>
-   <p>Guard dog wanted. Call 555-4321.</p>
-</section>
-
-</body>
-
-<h4>Figure 3.3.3: Adjacent sibling selector. Example</h4>
-
-<style>
-h7 + p {
-   border-top: 1px solid orange;
-}
-</style>
-<body>
-<section>
-   <h7>My Book Report</h7>
-   <p>I thoroughly enjoyed this book. The story made me
-   laugh and cry and jump for joy.</p>
-   <p>I recommend this book to anyone who loves to read.</p>
-</section>
-</body>
-</body>
-
-<h3>Attribute selector</h3>
-
-
-
-<h3>Pseudo-element selector</h3>
-
-
-::selection
-  {
-    color: green;
-
-}
-</section>
-
-
-
-<h2>3.4 Common properties</h2>
-<section>
-<h3>Color property</h3>
-
-
-
-<style>
-.byname {
-   color: blue;
-}
-.byrgb {
-   color: rgb(0, 255, 0);
-}
-.byhsl {
-   color: hsl(200, 100%, 50%);
-}
-</style>
-<body>
-<p class="byname">The text is blue</p>
-
-<p class="byrgb">The text is green</p>
-
-<p class="byhsl">The text is cyan</p>
-
-
-</body>
-
-
-<h3>Background properties</h3>
-
-<p>Below is the word "Hello" in different languages.</p>
-<ul id="americas" style="background-color: #ffff00">
-   <li id="hola" style="background-image: url('smiley.gif')">Hola</li>
-   <li id="olá" style="background: green url('smiley.gif')">Olá</li>
-</ul>
-<ul id="europe" style="background-image: url('clouds.png');">
-   <li id="salut" style="background: blue">Salut</li>
-   <li id="hej" style="background: red url('smiley.gif')">Hej</li>
-   <li id="bog" style="background: transparent url('smiley.gif')">Bog</li>
-</ul>	
-
-
-<h3>Float property</h3>
-
-<p>CSS properties float and clear control how text flows around HTML elements</p>
-
-
-<h3>Display property</h3>
-
-
-<p>The <b>display</b> property controls the layout of the element on a web page. Values for the display property include:</p>
-
-<ul>
-<li><b>inline</b> - Displays the element as an inline element, like span or a elements.
-<li><b>block</b> - Displays the element as a block element, like p, h1, or div elements.
-<li><b>none</b> - Hides the element from being displayed, like style elements.
-<li><b>inline-block</b> - Displays the contents of the element as a block element, but formats the element as an inline element.
-<li><b>list-item</b> - Displays the contents of the element as a list item element.
-</ul>
-
-<h4>PARTICIPATION ACTIVITY 3.4.7: Display CSS values. Example</h4>
-
-<style>
-.animal {
-   background: yellow;
-   width: 50px;
-   height: 40px;
-   display: block;
-}
-</style>
-
+inline - Displays the element as an inline element, like span or a elements.
+block - Displays the element as a block element, like p, h1, or div elements.
+none - Hides the element from being displayed, like style elements.
+inline-block - Displays the contents of the element as a block element, but formats the element as an inline element.
+list-item - Displays the contents of the element as a list item element.
+PARTICIPATION ACTIVITY 3.4.7: Display CSS values. Example
 My favorite breed of
-<span class="animal">cat</span>
+cat
 is Russian Blue.
-
-
-<h3>CSS variables</h3>
-
-A <b>CSS variable</b> is a custom CSS property that defines a value. A CSS variable is declared in a CSS selector that defines the variable's scope. A CSS variable can have global scope by declaring the variable in the :root selector, which targets the highest DOM element: the <html> element.
-
-A CSS variable is defined with two dashes preceding the variable name. Ex: --my-variable: red; A CSS variable is accessed with the var() function. Ex: var(--my-variable);
-
-<h4>Example - see code:</h4>
-
-<"style><br>
-
-:root {
-   --main-color: red;<br>
-   --main-bg-color: yellow;<br>
-}
-<br>
-p {<br>
-   color: var(--main-color);<br>
-   background-color: var(--main-bg-color);<br>
-}<br>
-
-<"/style>
-
-<p>The sun rises and sets.</p>
-</section>	
-	
-
-
-<h2>3.5 Font and text properties</h2>
-<section>
-<h3>Font properties</h3>
-
-Many CSS properties control the font properties for displaying text. CSS font properties include:
-
-<ul>
-    <li>The <b><i>font-family</b></i> property specifies the font family, such as "Times New Roman" or serif.</li>
-    <li>The <b><i>font-size</b></i> property changes the font size, such as 120%, small, or 12px.</li>
-    <li>The <b><i>font-weight</b></i> property specifies the font weight, such as normal or bold.</li>
-    <li>The <b><i>font-style</b></i> property changes the text style, such as normal, italic, or oblique.</li>
-    <li>The <b><i>font-variant</b></i> property specifies the variant of the text, such as normal or small-caps.</li>
-    <li>The <b><i>font property</b></i> is shorthand for setting several font properties at the same time. Ex: font: italic 12pt Georgia, serif;</li>
-</ul>
-
+CSS variables
+A CSS variable is a custom CSS property that defines a value. A CSS variable is declared in a CSS selector that defines the variable's scope. A CSS variable can have global scope by declaring the variable in the :root selector, which targets the highest DOM element: the element. A CSS variable is defined with two dashes preceding the variable name. Ex: --my-variable: red; A CSS variable is accessed with the var() function. Ex: var(--my-variable);
+Example - see code:
 <"style>
+:root { --main-color: red;
+--main-bg-color: yellow;
+}
 p {
-   font-family: "Verdana", "Arial", sans-serif;
-   font-size: 10pt;
-}
-#band {
-   font-style: italic;
-   font-size: 120%;
-}
-#music {
-   font-variant: small-caps;
+color: var(--main-color);
+background-color: var(--main-bg-color);
 }
 <"/style>
+The sun rises and sets.
 
-<p>
-My favorite band is <span id="band">The Shins</span>, because their 
-<span id="music">music</span> is thought-provoking!
-</p>
+3.5 Font and text properties
+Font properties
+Many CSS properties control the font properties for displaying text. CSS font properties include:
+The font-family property specifies the font family, such as "Times New Roman" or serif.
+The font-size property changes the font size, such as 120%, small, or 12px.
+The font-weight property specifies the font weight, such as normal or bold.
+The font-style property changes the text style, such as normal, italic, or oblique.
+The font-variant property specifies the variant of the text, such as normal or small-caps.
+The font property is shorthand for setting several font properties at the same time. Ex: font: italic 12pt Georgia, serif;
+<"style> p { font-family: "Verdana", "Arial", sans-serif; font-size: 10pt; } #band { font-style: italic; font-size: 120%; } #music { font-variant: small-caps; } <"/style>
+My favorite band is The Shins, because their music is thought-provoking!
 
-<h3>Text properties</h3>
+Text properties
+Many CSS properties control how text is displayed. Some common CSS text properties include:
 
-<p>Many CSS properties control how text is displayed. Some common CSS text properties include:</p>
-
-<ul>
-
-<li>    The <b><i>text-align</b></i> property changes the horizontal alignment of text for an element. Possible values are: left, right, center, and justify.</li>
-<li>    The <b><i>text-decoration</b></i> property can add or remove text decorations like underlining or a line-through. Possible values are: overline, line-through, underline, and none.</li>
-<li>    The <b><i>text-transform</b></i> property converts letters to UPPERCASE, lowercase, or Capitalizes Initial Letters. Possible values are: uppercase, lowercase, and capitalize.</li>
-<li>    The <b><i>text-indent</b></i> property specifies the first line's indentation amount.</li>
-<li>    The CSS <b><i>text-decoration:none</b></i> is commonly used to remove the default underline from links.</li>
-
-</ul>
-
-<h4>Challenge activity 3.5.1: Font and text properties. Example#1 </h4>
-
-p {<br>
-font-family:cursive;<br>
-font-weight:lighter;<br>
-}<br>
-
-<h4>Challenge activity 3.5.1: Font and text properties. Example#2</h4>
-
-p {<br>
-   text-align:justify;<br>
-}<br>
-</section>
-
-
-
-<h2>3.6 Box model</h2>
-<section>
-<h3>Box model components</h3>
-
-<p>HTML elements take up space on the web page. The <b><i>box model</b></i> describes the size of each element as a series of nested boxes. The box model is important to understand when considering design and layout.</p>
-<ul>
-    <li><b><i>Content</b></i>: The innermost box contains the content of the element, such as text and images.</li>
-    <li><b><i>Padding</b></i>: The padding box contains the content box and adds a transparent area around the content.</li>
-    <li><b><i>Border</b></i>: The border box contains the padded content and adds an optionally colored area around the padding.</li>
-    <li><b><i>Margin</b></i>: The margin box contains all three boxes and adds a transparent area around the border.</li>
-</ul>
-< <img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_296f2fe4-931f-6dc5-0ea8-1a4666d6694c_3zq5XqNfWNBoMiS4wcuv.png">
-
-
-
-<p>The CSS properties that control the padding, border, and margin are:</p>
-
-<ul>
-
-<li>    The <b><i>padding</b></i> property specifies the padding thickness. Ex: padding: 5px; creates a 5 pixel padding around the content.</li>
-<li>    The <b><i>border</b></i> property specifies the border's thickness, style, and color. Ex: border: 2px solid blue; creates a solid blue border that is 2 pixels thick.</li>
-<li>    The <b><i>margin</b></i> property specifies the margin thickness. Ex: margin: 10px; creates a 10 pixel margin.</li>
-</ul>
-
-<h4>Participation activity 3.6.1: Box model displayed. </h4>
-
-<style>
-#div3{background-color: red;}
-	#content {
-        	padding: 5px;
-	        border: 5px solid black;
-		}
-</style>
-
-<div id="div3">Before</div>
-<div id="content">Content</div>
-<div id="div3">After</div>
- 	
-
-
-
-<h3>Box sizing</h3>
-
-<h4>Example 3.6.1: Example with non-uniform margin and padding thickness.</h4>
-<"style><br>
-h5 {<br>
-   margin: 40px 30px;<br> 
-   padding: 20px 50px 40px;<br>
-   background-color: khaki;<br>
-}<br>
-<"/style>
-
-<section>
-<style>
-h5 {
-   margin: 40px 30px; 
-   padding: 20px 50px 40px;
-   background-color: khaki;
+The text-align property changes the horizontal alignment of text for an element. Possible values are: left, right, center, and justify.
+The text-decoration property can add or remove text decorations like underlining or a line-through. Possible values are: overline, line-through, underline, and none.
+The text-transform property converts letters to UPPERCASE, lowercase, or Capitalizes Initial Letters. Possible values are: uppercase, lowercase, and capitalize.
+The text-indent property specifies the first line's indentation amount.
+The CSS text-decoration:none is commonly used to remove the default underline from links.
+Challenge activity 3.5.1: Font and text properties. Example#1
+p {
+font-family:cursive;
+font-weight:lighter;
 }
-</style>
-<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_0825a9a9-8110-2d2a-37e7-96276c150c12_3zq5XqNfWNBoMiS4wcuv.png"></p>
-
-<h5>The Box Model</h5>
-</section>
-
-<section>
-
-
-<h4>Example 3.6.2: Example specifying one side of the box.</h4>
-
-
-<"style><br>
-h1 {<br>
-   border-left: 5px solid darkcyan;<br>
-   margin-right: 30px; <br>
-   padding-top: 20px;<br>
-   background-color: lightcyan;<br>
-}<br>
-<"/style><br>
-
-
-
-<style>
-h6 {
-   border-left: 5px solid darkcyan;
-   margin-right: 30px; 
-   padding-top: 20px;
-   background-color: lightcyan;
+Challenge activity 3.5.1: Font and text properties. Example#2
+p {
+text-align:justify;
 }
-</style>
+3.6 Box model
+Box model components
+HTML elements take up space on the web page. The box model describes the size of each element as a series of nested boxes. The box model is important to understand when considering design and layout.
 
-<h6>The Box Model</h6>
+Content: The innermost box contains the content of the element, such as text and images.
+Padding: The padding box contains the content box and adds a transparent area around the content.
+Border: The border box contains the padded content and adds an optionally colored area around the padding.
+Margin: The margin box contains all three boxes and adds a transparent area around the border.
+< 
+The CSS properties that control the padding, border, and margin are:
 
-<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_ea63be25-bdb0-5117-91ab-86185223d60e_3zq5XqNfWNBoMiS4wcuv.png"></p>
-
-
-<h3>Content width and height</h3>
-
-<h4>Example 3.6.3: Example using width and height properties.</h4>
-
-
-<style>
-#nopadding {
-   width: 200px;
-   height: 100px;
-   background-color: lightgreen;
-   font-size: 30px;
-}
-
-#padding {
-   padding: 50px;
-   width: 200px;
-   height: 100px;
-   background-color: khaki;
-   font-size: 30px;
-}
-</style>
-
-<div id="nopadding">Controlling the content size</div>
-<div id="padding">Controlling the content size</div>
-
-
-<"style><br>
-#nopadding {<br>
-   width: 200px;<br>
-   height: 100px;<br>
-   background-color: lightgreen;<br>
-   font-size: 30px;<br>
-}<br>
-
-#padding {<br>
-   padding: 50px;<br>
-   width: 200px;<br>
-   height: 100px;<br>
-   background-color: khaki;<br>
-   font-size: 30px;<br>
-}<br>
-<"/style>
-
-<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_87acb51a-1667-5374-1569-1c08edc7d9dc_3zq5XqNfWNBoMiS4wcuv.png"></p>
-
-
-
-<h3>Border styles</h3>
-
-
-
-<p>The border property combines the border width, style, and color. Each CSS property may also be specified separately:</p>
-<ul>
-<li>
-<li>    The <b><i>border-width</b></i> property specifies the border's width. Ex: border-width: 5px; specifies a border that is 5px thick.</li>
-<li>    The <b><i>border-style</b></i> property specifies the border's style. Ex: border-style: dashed; specifies a border that is dashed.</li>
-<li>    The <b><i>border-color</b></i> property specifies the border's color. Ex: border-color: green; specifies a border that is green.</li>
-</ul>
-
-
-
-
-
-<h3>Margin collapsing and horizontal centering</h3>
-
-<h4>Example 3.6.5: Collapsed margins.</h4>
-
-<style>
-.outer {
-  border: 2px dotted black;
-}
-.inner {
-  margin: 10px;
-  border: 1px solid gray;
-}
-span {
-  margin: 10px;
-  background: lightgray;
-}
-</style>
-<div class="outer">
-  <div class="inner">
-    <span>First</span><span>element</span>
-  </div>
-  <div class="inner">
-    Second element
-  </div>
-</div>
-
-<h4>Example 3.6.6: Horizontal centering.</h4>
-
-<block>
-
+The padding property specifies the padding thickness. Ex: padding: 5px; creates a 5 pixel padding around the content.
+The border property specifies the border's thickness, style, and color. Ex: border: 2px solid blue; creates a solid blue border that is 2 pixels thick.
+The margin property specifies the margin thickness. Ex: margin: 10px; creates a 10 pixel margin.
+Participation activity 3.6.1: Box model displayed.
+Before
+Content
+After
+Box sizing
+Example 3.6.1: Example with non-uniform margin and padding thickness.
 <"style>
-.outer {
-  border: 2px dotted black;
-}
-.inner {
-  margin: auto;
-  width: 100px;
-  border: 1px solid gray;
+h5 {
+margin: 40px 30px;
+padding: 20px 50px 40px;
+background-color: khaki;
 }
 <"/style>
-<div class="outer">
-  <div class="inner">
-    Centered content
-  </div>
-  <div class="inner">
-    Second element
-  </div>
-</div>
-</section>
 
 
-
-
-<h2>3.7 Example: Styled band web page</h2>
-<section>
-
-
-<h3>Page colors</h3>
-
-
-<h3>Styling the text</h3>
-
-
-<h3>Relocating the band member list</h3>
-
-
-<h3>Spacing</h3>
-
-
-</section>
-
-
-
-
-
-
-
-
-
-
-
-<section id="4. Advanced CSS">
-<h1>4. Advanced CSS</h1>
-
-<h2>4.1 Flexbox</h2>
-
-<h3>Fluid layout</h3>
-
-
-<p>CSS is instrumental in creating a page layout that is visually appealing. Many websites use the same layout on every web page for consistency. The layout normally contains the following sections:</p>
-<ul>
-<li>    Header at the top that identifies the website</li>
-<li>    Navigational links at the top or left side that present the main links for navigating the website</li>
-<li>    Various sections that include related content</li>
-<li>    Footer at the bottom that contains contact information, copyright, author name, etc.</li>
-</lu>
-
-<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_edebb591-9bb9-6894-a6a2-29e4eb385ad1_FNmpBh5KvIs4CTadnnqz.png"></p>
-
-
-
-
-<h3>4.1 Flexbox</h3>
-
-
-<h3>4.1 Flexbox layout</h3>
-
-
-www.w3schools.com/html/html_layout.asp
-
-https://www.w3schools.com/css/css3_flexbox.asp
-
-
-<h4>hallenge activity 4.1.1: Flexbox. #1</h4>
-
-.container {
-
-   display:flex;
-   width: 100px;
-
+The Box Model
+Example 3.6.2: Example specifying one side of the box.
+<"style>
+h1 {
+border-left: 5px solid darkcyan;
+margin-right: 30px;
+padding-top: 20px;
+background-color: lightcyan;
 }
-.container > div {
-   background-color: lightblue;
-   border: 2px solid blue;
-   padding: 6px;
+<"/style>
+The Box Model
+
+
+Content width and height
+Example 3.6.3: Example using width and height properties.
+Controlling the content size
+Controlling the content size
+<"style>
+#nopadding {
+width: 200px;
+height: 100px;
+background-color: lightgreen;
+font-size: 30px;
 }
-
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
-
-
-
-
-
-<h4>hallenge activity 4.1.1: Flexbox. #2</h4>
-
-.container {
-   border: 2px solid lightblue;
-   display: flex;
-   height: 120px;
-   width: 120px;
-
-   flex-direction: column-reverse;
-   justify-content: space-around;
-
+#padding {
+padding: 50px;
+width: 200px;
+height: 100px;
+background-color: khaki;
+font-size: 30px;
 }
-.container > div {
-   background-color: lightblue;
-   border: 2px solid blue;
-   padding: 6px;
-}
+<"/style>
 
 
+Border styles
+The border property combines the border width, style, and color. Each CSS property may also be specified separately:
 
-<div class="container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-</div>
+The border-width property specifies the border's width. Ex: border-width: 5px; specifies a border that is 5px thick.
+The border-style property specifies the border's style. Ex: border-style: dashed; specifies a border that is dashed.
+The border-color property specifies the border's color. Ex: border-color: green; specifies a border that is green.
+Margin collapsing and horizontal centering
+Example 3.6.5: Collapsed margins.
+Firstelement
+Second element
+Example 3.6.6: Horizontal centering.
+<"style> .outer { border: 2px dotted black; } .inner { margin: auto; width: 100px; border: 1px solid gray; } <"/style>
+Centered content
+Second element
+3.7 Example: Styled band web page
+Page colors
+Styling the text
+Relocating the band member list
+Spacing
+4. Advanced CSS
+4.1 Flexbox
+Fluid layout
+CSS is instrumental in creating a page layout that is visually appealing. Many websites use the same layout on every web page for consistency. The layout normally contains the following sections:
 
-
-
-<h4>hallenge activity 4.1.1: Flexbox. #2</h4>
-
-
-
-.first {
-   flex-basis:50%;
-
-}
-.second {
-   flex-basis: 20%;
-
-}
-.third {
-   flex-basis: 30%
-
-}
-
-.container {
-   display: flex;
-   width: 120px;
-}
-.container > div {
-   background-color: lightblue;
-   border: 2px solid blue;
-   height: 25px;
-}<br>
+Header at the top that identifies the website
+Navigational links at the top or left side that present the main links for navigating the website
+Various sections that include related content
+Footer at the bottom that contains contact information, copyright, author name, etc.
 
 
+4.1 Flexbox
+4.1 Flexbox layout
+www.w3schools.com/html/html_layout.asp https://www.w3schools.com/css/css3_flexbox.asp
+hallenge activity 4.1.1: Flexbox. #1
+.container { display:flex; width: 100px; } .container > div { background-color: lightblue; border: 2px solid blue; padding: 6px; }
+1
+2
+3
+hallenge activity 4.1.1: Flexbox. #2
+.container { border: 2px solid lightblue; display: flex; height: 120px; width: 120px; flex-direction: column-reverse; justify-content: space-around; } .container > div { background-color: lightblue; border: 2px solid blue; padding: 6px; }
+1
+2
+3
+hallenge activity 4.1.1: Flexbox. #2
+.first { flex-basis:50%; } .second { flex-basis: 20%; } .third { flex-basis: 30% } .container { display: flex; width: 120px; } .container > div { background-color: lightblue; border: 2px solid blue; height: 25px; }
+<"div class"container">
+<"div class="first">
+<"div class="second">
+<"div class="third">
+<"/div>
+4.2 Grid layout
+Grid container and grid items
+Grid layout is a CSS layout mode that divides a web page into a rectangular grid in which to position page elements. Grid layout is ideal for designing two-dimensional web page layouts.
 
-<"div class"container"><br>
-  <"div class="first"></div><br>
-  <"div class="second"></div><br>
-  <"div class="third"></div><br>
-<"/div><br>
-  
+A grid container is an element that has the CSS property display set to grid to create a block-level grid container or grid-inline to create an inline grid container. Ex: <"div style="display: grid">. A grid item is a child element of a grid container that is by default placed into a single grid cell.
 
+The grid-template-columns property defines the grid container's number of columns and optionally the width of each column. Ex: grid-template-columns: 50px 90px auto auto; specifies 4 values that create 4 columns: the first is 50px wide, the second is 90px wide, and the third and fourth columns are automatically sized to fit the remainder of the grid width.
 
-
-<h2>4.2 Grid layout</h2>
-
-
-<h3>Grid container and grid items</h3>
-
-<p><b><i>Grid layout</b></i> is a CSS layout mode that divides a web page into a rectangular grid in which to position page elements. Grid layout is ideal for designing two-dimensional web page layouts.</p>
-
-<p>A <b><i>grid container</b></i> is an element that has the CSS property display set to grid to create a block-level grid container or grid-inline to create an inline grid container. Ex: <"div style="display: grid">. A <b><i>grid item</b></i> is a child element of a grid container that is by default placed into a single grid cell.</p>
-
-<p>The <b><i>grid-template-columns</b></i> property defines the grid container's number of columns and optionally the width of each column. Ex: grid-template-columns: 50px 90px auto auto; specifies 4 values that create 4 columns: the first is 50px wide, the second is 90px wide, and the third and fourth columns are automatically sized to fit the remainder of the grid width.</p>
-
-
-
-
-<h3>Controlling the grid container</h3>
-
-
-
-
+Controlling the grid container
 The default behavior of a grid container can be modified with various CSS properties:
-<ul>
-<li>    The <b><i>grid-gap</b></i> property defines the gap between each grid column and row. Ex: grid-gap: 10px 20px; puts a 10px gap between each row 20px gap between each column.</li>
+The grid-gap property defines the gap between each grid column and row. Ex: grid-gap: 10px 20px; puts a 10px gap between each row 20px gap between each column.
+The grid-template-rows property defines the height of each row. Ex: grid-template-rows: 20px 40px; makes the first row 20px tall and the second row 40px tall.
+The justify-content property horizontally aligns the grid items inside the grid container using values: start - Aligns grid flush with the grid container's starting edge. end - Aligns grid flush with the grid container's ending edge. center - Aligns grid in the center of the grid container. stretch - Stretches the grid items to fill the grid container width. space-around - Places equal spacing between grid items with half the space on either side of the grid container. space-between - Places equal spacing between grid items with no space on either side of the grid container. space-evenly - Places equal spacing between grid items, including the sides of the grid container.
+The align-content property vertically aligns the grid items inside the grid container using values:
+start - Aligns grid flush with the grid container's starting edge. end - Aligns grid flush with the grid container's ending edge. center - Aligns grid in the center of the grid container. stretch - Stretches the grid items to fill the grid container height. space-around - Places equal spacing between grid items with half the space on either side of the grid container. space-between - Places equal spacing between grid items with no space on either side of the grid container. space-evenly - Places equal spacing between grid items, including the sides of the grid container.
+The justify-content and align-content properties have no effect unless the grid width or height is less than the grid container's width or height.
 
-<li>    The <b><i>grid-template-rows</b></i> property defines the height of each row. Ex: grid-template-rows: 20px 40px; makes the first row 20px tall and the second row 40px tall.</li>
-
-<li>    The <b><i>justify-content</b></i> property horizontally aligns the grid items inside the grid container using values:
-        start - Aligns grid flush with the grid container's starting edge.
-        end - Aligns grid flush with the grid container's ending edge.
-        center - Aligns grid in the center of the grid container.
-        stretch - Stretches the grid items to fill the grid container width.
-        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
-        space-between - Places equal spacing between grid items with no space on either side of the grid container.
-        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
-<li>    The <b><i>align-content</b></i> property vertically aligns the grid items inside the grid container using values:</li>
-        start - Aligns grid flush with the grid container's starting edge.
-        end - Aligns grid flush with the grid container's ending edge.
-        center - Aligns grid in the center of the grid container.
-        stretch - Stretches the grid items to fill the grid container height.
-        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
-        space-between - Places equal spacing between grid items with no space on either side of the grid container.
-        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
-
-<p>The justify-content and align-content properties have no effect unless the grid width or height is less than the grid container's width or height.</p>
+Controlling grid item placement
 
 
+5. Mobile Web Development
+6. Basic JavaScript
+7. JavaScript in the Browser
+7.1 Using JavaScript with HTML
+Basics
+Web pages add JavaScript code by using the script tag. JavaScript code between script /script tags is executed by the browser's JavaScript engine.
 
+Example: 7.1.1: Writing JavaScript within the body of an HTML file.
+Magic 8 Ball
 
-<h3> Controlling grid item placement </h3>
+Magic 8 Ball says... Don't count on it.
 
+Window object
+window.location is a location object that contains information about the window's current URL. Ex: window.location.hostname is the URL's hostname.
 
+window.navigator is a navigator object that contains information about the browser. Ex: window.navigator.userAgent returns the browser's user agent string.
 
-<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_17efa2b2-784f-9ba1-0e51-0e9c1728df82_FNmpBh5KvIs4CTadnnqz.png"></p>
+window.innerHeight and window.innerWidth are the height and width in pixels of the window's content area. Ex: window.innerWidth returns 600 if the browser's content area is 600 pixels wide.
 
+The window object defines some useful methods:
+window.alert() displays an alert dialog box. Ex: window.alert("Hello") displays a dialog box with the message "Hello".
 
+window.confirm() displays a confirmation dialog box with OK and Cancel buttons. confirm() returns true if OK is pressed and false if Cancel is pressed. Ex: window.confirm("Are you sure?") displays a dialog box with the question.
 
+window.open() opens a new browser window. Ex: window.open("http://www.twitter.com/") opens a new browser that loads the Twitter web page.
 
+Using the console
+Good practice is to leave the console open while writing and testing JavaScript code.
 
+API (Application Programming Interface)
+The console API includes the following methods:
 
+console.log() displays informational data to the console. console.warn() displays warnings to the console. The browser usually has a special indicator to differentiate a warning from the standard log message. Ex: A yellow warning box. console.error() displays errors to the console. The browser usually has a special indicator to differentiate an error from a warning or the standard log message. Ex: A red error box. console.dir() displays a JavaScript object to the console. The browser usually supports a method for compactly representing the object. Ex: a hierarchical tree representation allowing a developer to expand and collapse the object contents.
+Loading JavaScript from an external file
+Good practice is to use script tags to load JavaScript from external files rather than writing the JavaScript directly within the HTML file. The script tag's src attribute specifies a JavaScript file to load.
 
+Minification and obfuscation
+To reduce the amount of JavaScript that must be downloaded from a web server, developers often minify a website's JavaScript. Minification or minimization is the process of removing unnecessary characters (like whitespace and comments)
 
-
-
-
-
-
-
-
-
-
-<section id="5. Mobile Web Development">
-<h1>5. Mobile Web Development</h1>
-
-
-
-<h1>6. Basic JavaScript</h1>
-
-
-
-
-<section id="7. JavaScript in the Browser">
-
-<h1>7. JavaScript in the Browser</h1>
-
-<h2>7.1 Using JavaScript with HTML</h2>
-<section>
-<h3>Basics</h3>
-<p>Web pages add JavaScript code by using the <b>script</b> tag. JavaScript code between <b>script</b><b> /script</b>  tags is executed by the browser's JavaScript engine.<p> 
-</body>
-
-<body>
-<h4>Example: 7.1.1: Writing JavaScript within the body of an HTML file.</h4>
-   <p>Magic 8 Ball</p>
-   <script>
-
-   // Possible 8 Ball responses
-   let responses = [ "Without a doubt", "Ask again later", "Don't count on it", "aaa", "bbb","ccc"];
-
-   // Display a randomly chosen response
-   let randomNum = Math.floor(Math.random() * responses.length);
-   document.writeln("<p>Magic 8 Ball says... <strong>" + responses[randomNum] + "</strong>.</p>");
-
-   </script>   
-</body>
-
-
-<h3>Window object</h3>
-
-<ul>
-  <li>
-    <p><b><i>window.location</b></i> is a location object that contains information about the window's current URL. Ex: window.location.hostname is the URL's hostname.</p>
-  </li>
-  <li> 
-    <p><b><i> window.navigator</b></i> is a navigator object that contains information about the browser. Ex: window.navigator.userAgent returns the browser's user agent string.</p>
-  </li>
-    <li> 
-      <p><b><i>window.innerHeight</b></i> and window.innerWidth are the height and width in pixels of the window's content area. Ex: window.innerWidth returns 600 if the browser's content area is 600 pixels wide.</p>
-  </li>
-
- The window object defines some useful methods:
-
-  <li>
-   <p><b><i> window.alert()</b></i> displays an alert dialog box. Ex: window.alert("Hello") displays a dialog box with the message "Hello".</p>
-  </li>
-  <li>
-    <p><b><i>  window.confirm() </b></i>displays a confirmation dialog box with OK and Cancel buttons. confirm() returns true if OK is pressed and false if Cancel is pressed. Ex: window.confirm("Are you sure?") displays a dialog box with the question.</p>
-  </li>
-  <li>
-    <p><b><i> window.open() </b></i>opens a new browser window. Ex: window.open("http://www.twitter.com/") opens a new browser that loads the Twitter web page.</p>
-  </li>
-</ul>
-
-<h3>Using the console</h3>
-<p>Good practice is to leave the console open while writing and testing JavaScript code.</p>
-
-
-<h3>API (Application Programming Interface)</h3>
-
-<p>The console API includes the following methods:</p>
-
-    console.log() displays informational data to the console.
-
-    console.warn() displays warnings to the console. The browser usually has a special indicator to differentiate a warning from the standard log message. Ex: A yellow warning box.
-
-    console.error() displays errors to the console. The browser usually has a special indicator to differentiate an error from a warning or the standard log message. Ex: A red error box.
-
-    console.dir() displays a JavaScript object to the console. The browser usually supports a method for compactly representing the object. Ex: a hierarchical tree representation allowing a developer to expand and collapse the object contents.
-
-
-<h3>Loading JavaScript from an external file</h3>
-
-<p>Good practice is to use <b>script</b> tags to load JavaScript from external files rather than writing the JavaScript directly within the HTML file. The <b>script</b> tag's <b><i>src</i></b> attribute specifies a JavaScript file to load. </p>
-
-
-<h3>Minification and obfuscation</h3>
-
-<p>To reduce the amount of JavaScript that must be downloaded from a web server, developers often minify a website's JavaScript. <b>Minification</b> or <b>minimization</b> is the process of removing unnecessary characters (like whitespace and comments) </p>
-
-
-<p>A JavaScript <b>obfuscator</b> is software that converts JavaScript into an unreadable form that is very difficult to convert back into readable JavaScript. Developers obfuscate a website's JavaScript to prevent the code from being read or re-purposed by others. Obfuscated code may also be minified and appear in a ".min.js" file.</p>
-</section>
-</body>
-</html>
+A JavaScript obfuscator is software that converts JavaScript into an unreadable form that is very difficult to convert back into readable JavaScript. Developers obfuscate a website's JavaScript to prevent the code from being read or re-purposed by others. Obfuscated code may also be minified and appear in a ".min.js" file.
