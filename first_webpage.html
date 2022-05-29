@@ -30,6 +30,7 @@
 	}
     p span {
 	color: blue;
+	width: 70%;
     }
     h4 {
         <b>;
@@ -42,7 +43,14 @@
 	}
     .nav {
   	text-align: center;
-	border:  solid orange;
+	border:  solid blue;
+	position: fixed;
+	background-color: white;
+	padding: 20px;
+	z-index: 3;
+	left: 20%;
+	
+
 	
 }
   </style>
@@ -1407,27 +1415,30 @@ https://www.w3schools.com/css/css3_flexbox.asp
 
 The default behavior of a grid container can be modified with various CSS properties:
 <ul>
-<li>    The <b><i>grid-gap</b></i> property defines the gap between each grid column and row. Ex: grid-gap: 10px 20px; puts a 10px gap between each row 20px gap between each column.</li>
+<p><li>The <b><i>grid-gap</b></i> property defines the gap between each grid column and row. Ex: grid-gap: 10px 20px; puts a 10px gap between each row 20px gap between each column.</li></p>
 
-<li>    The <b><i>grid-template-rows</b></i> property defines the height of each row. Ex: grid-template-rows: 20px 40px; makes the first row 20px tall and the second row 40px tall.</li>
+<p><li>The <b><i>grid-template-rows</b></i> property defines the height of each row. Ex: grid-template-rows: 20px 40px; makes the first row 20px tall and the second row 40px tall.</li></p>
 
-<li>    The <b><i>justify-content</b></i> property horizontally aligns the grid items inside the grid container using values:
-        start - Aligns grid flush with the grid container's starting edge.
-        end - Aligns grid flush with the grid container's ending edge.
-        center - Aligns grid in the center of the grid container.
-        stretch - Stretches the grid items to fill the grid container width.
-        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
-        space-between - Places equal spacing between grid items with no space on either side of the grid container.
-        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
-<li>    The <b><i>align-content</b></i> property vertically aligns the grid items inside the grid container using values:</li>
-        start - Aligns grid flush with the grid container's starting edge.
-        end - Aligns grid flush with the grid container's ending edge.
-        center - Aligns grid in the center of the grid container.
-        stretch - Stretches the grid items to fill the grid container height.
-        space-around - Places equal spacing between grid items with half the space on either side of the grid container.
-        space-between - Places equal spacing between grid items with no space on either side of the grid container.
-        space-evenly - Places equal spacing between grid items, including the sides of the grid container.
-
+<p><li>The <b><i>justify-content</b></i> property horizontally aligns the grid items inside the grid container using values:
+<ul>
+<li>        <b><i>start</b></i> - Aligns grid flush with the grid container's starting edge.</li>
+<li>        <b><i>end</b></i> - Aligns grid flush with the grid container's ending edge.</li>
+<li>        <b><i>center</b></i> - Aligns grid in the center of the grid container.</li>
+<li>        <b><i>stretch</b></i> - Stretches the grid items to fill the grid container width.</li>
+<li>        <b><i>space-around</b></i> - Places equal spacing between grid items with half the space on either side of the grid container.</li>
+<li>        <b><i>space-between</b></i> - Places equal spacing between grid items with no space on either side of the grid container.</li>
+<li>        <b><i>space-evenly</b></i> - Places equal spacing between grid items, including the sides of the grid container.</p></li>
+</ul>
+<p><li>The <b><i>align-content</b></i> property vertically aligns the grid items inside the grid container using values:</li>
+<ul>
+<li>        <b><i>start</b></i> - Aligns grid flush with the grid container's starting edge.</li>
+<li>        <b><i>end</b></i> - Aligns grid flush with the grid container's ending edge.</li>
+<li>        <b><i>center</b></i> - Aligns grid in the center of the grid container.</li>
+<li>        <b><i>stretch</b></i> - Stretches the grid items to fill the grid container height.</li>
+<li>        <b><i>space-around</b></i> - Places equal spacing between grid items with half the space on either side of the grid container.</li>
+<li>        <b><i>space-between</b></i> - Places equal spacing between grid items with no space on either side of the grid container.</li>
+<li>        <b><i>space-evenly</b></i> - Places equal spacing between grid items, including the sides of the grid container.</p></li>
+</ul>
 <p>The justify-content and align-content properties have no effect unless the grid width or height is less than the grid container's width or height.</p>
 
 
@@ -1435,11 +1446,600 @@ The default behavior of a grid container can be modified with various CSS proper
 
 <h3> Controlling grid item placement </h3>
 
-
+<p>A grid item by default appears in a single row and column based on the ordering of the grid item within the grid container. However, grid items may be positioned at specific grid locations using the column line and row line numbers as illustrated in the figure below.</p>
 
 <p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_17efa2b2-784f-9ba1-0e51-0e9c1728df82_FNmpBh5KvIs4CTadnnqz.png"></p>
 
 
+
+<p>A grid item may be placed in a specific row or column or span multiple rows and/or columns using various following CSS properties:</p>
+<ul>
+<p><li>The <b><i>grid-row</b></i> property lists the grid item's starting and ending row line numbers. Ex: grid-row: 1 / 3; makes the grid item start at row line 1 and end at row line 3, so the grid item spans 2 rows.</li></p>
+
+<p><li>The <b><i>grid-column</b></i> property lists the grid item's starting and ending column line numbers. Ex: grid-column: 1 / 4; makes the grid item start at column line 1 and end at column line 4, so the grid item spans 3 columns.</li></p>
+
+<p><li>The <b><i>grid-area</b></i> property lists the grid item's starting and ending row and column numbers. Ex: grid-area: 1 / 2 / 3 / 4; makes the grid item start at row line 1 and column line 2 and end at row line 3 and column line 4, so the grid item spans 2 rows and 2 columns.</li></p>
+</ul>
+
+
+
+<h4>PARTICIPATION ACTIVITY 4.2.4: Rearrange the grid.</h4>
+
+
+<style>
+#grid-container {
+   width: 400px;
+   font-size: 2em;
+   background: cornflowerblue;
+   display: grid;
+   grid-template-columns: auto auto auto;
+   grid-gap: 5px 5px;
+}
+
+#grid-container > div {
+   background: powderblue;
+   padding: 10px;
+}
+#grid-item-a {
+   grid-row: 3 / 4;
+}
+#grid-item-b {
+   grid-column: 3 / 4;
+   grid-row: 1 / 4; 
+}
+#grid-item-c {
+   grid-area: 1 / 1 / 4 / 3;
+}
+</style>
+
+
+<body>
+   <div id="grid-container">
+      <div id="grid-item-a">A</div>
+      <div id="grid-item-b">B</div>
+      <div id="grid-item-c">C</div>
+      <div>D</div>
+      <div>E</div>
+      <div>F</div>
+      <div>G</div>
+      <div>H</div>
+      <div>I</div>
+   </div>
+</body>
+
+
+
+
+<h3>Naming grid items</h3>
+
+<p>Grid items may be assigned names with the grid-area property. The grid container's grid-template-areas property specifies the grid layout using the named grid items.</p>
+
+Figure 4.2.2: Layout goal for the Participation Activity below.
+<p><img src="https://zytools.zybooks.com/zyAuthor/WebProgramming/63/IMAGES/embedded_image_1_189d388b-38d5-95ab-300f-618ca5042378_FNmpBh5KvIs4CTadnnqz.png"></p>
+
+
+
+body {<br>
+   display: grid;<br>
+   background: black;<br>
+   font-size: 2em;<br>
+   text-align: center;<br>
+   display: grid;<br>
+   grid-template-columns: 150px auto 150px;<br>
+   grid-template-rows: 60px 180px 40px;<br>
+   grid-template-areas: <br>
+      "head head head"<br>
+      "nav article aside"<br>
+      "foot foot foot";<br>
+}<br>
+
+header {<br>
+   background: cornflowerblue;<br>
+   grid-area: head;<br>
+}
+
+nav {<br>
+   background: khaki;<br>
+   grid-area: nav;<br>
+}<br>
+
+article {<br>
+   background: darkseagreen;<br>
+   grid-area: article;<br>
+}<br>
+
+aside {<br>
+   background: goldenrod;<br>
+   grid-area: aside;<br>
+}<br>
+
+footer {<br>
+   background: lemonchiffon;<br>
+   grid-area: foot;<br>
+}<br>
+
+<body>
+   <header>Header</header>
+   <nav>Nav</nav>  
+   <article>Article</article>
+   <aside>Aside</aside>
+   <footer>Footer</footer>
+</body>
+
+
+
+<h2>4.3 Positioning elements</h2>
+
+
+<h3>position property</h3>
+
+
+<p>The CSS <b><i>position</b></i> property gives developers more control over where elements should appear in the browser. position has four possible values:<p>
+<ul>
+<p><li>static - <b><i>Static positioning</b></i> is the default positioning</li></p>
+<p><li>relative - <b><i>Relative positioning</b></i> positions the element relative to the element's default position</li></p>
+<p><li>fixed - <b><i>Fixed positioning</b></i> positions the element relative to the viewport in a fixed location</li></p>
+<p><li>absolute - <b><i>Absolute positioning</b></i> positions the element relative to the nearest positioned ancestor</li></p>
+</ul>
+
+<h4>Relative positioning</h4>
+
+<style>
+#content4 {
+  border: solid 2px blue;
+  color: blue;
+  position: relative;
+  left: 20px;
+  top: 10px;
+}
+
+</style>
+
+
+
+<div>Before</div>
+<div id="content4">Content</div>
+<div>After</div>
+
+<p>
+<img src="https://images.theconversation.com/files/378097/original/file-20210111-23-bqsfwl.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=1200&h=1200.0&fit=crop" style="position:relative; left:300px; height:500px;">
+</p>
+
+
+
+<h4>Fixed positioning</h4>
+
+
+<style>
+#content433 {
+  border: solid 2px blue;
+  color: blue;
+  "position: fixed;"
+  left: 60px;
+  top: 50px;
+}
+</style>
+
+<div>Before</div>
+<div id="content433">Content</div>
+<div>After</div>
+
+
+
+<h3>Absolute positioning</h3>
+
+
+<p>Absolute positioning is similar to fixed positioning except the position is based on the nearest positioned ancestor element that uses fixed, absolute, or relative positioning. If no positioned ancestor element exists, the element is positioned relative to the document body. An absolute-positioned element scrolls with the document unless an ancestor element is using fixed positioning.
+</p>
+
+
+<style>
+#container {
+  border: solid 2px green;
+  position: relative;
+  height: 60px;
+  width: 150px;
+}        
+#cheer {
+  color: red;
+  position: absolute;
+  left: 10px;
+  top: 25px;
+}
+ </style>
+<div id="container">
+  <div id="cheer">Go, fight, win!</div>
+</div>
+
+
+
+<h3>z-index property</h3>
+
+<p>When a relative, absolute, or fixed element is placed on top of another positioned element, the element that is specified last in the HTML is placed on top. However, the CSS z-index property is used to specify a relative distance that orders the appearance of elements. Elements with higher z-index values are placed on top of elements with lower z-index values.</p>
+
+
+
+
+<h4>PARTICIPATION ACTIVITY 4.3.7: Positioning practice.</h4>
+
+
+
+
+
+
+.heart {
+   color: red; 
+   font-size: 65pt;
+   position:absolute;
+   top: 50px;
+   left: 130px;
+   z-index: 2;
+}
+
+
+.firstwords {
+   font-family: impact;
+   font-size: 46pt;
+   position:absolute;
+   top: 70px;
+   left: 110px;
+   z-index: 4;
+}
+.lastwords {
+   font-family: impact;
+   font-size: 46pt;
+   position:absolute;
+   top: 120px;
+   left: 110px;
+   z-index: 4;
+}
+
+
+</style>
+<p><span class="first words">I</span> <span class="heart">&hearts;</span> <span class="last words">NY</span>
+<img src="https://resources.zybooks.com/WebProgramming/tshirtv1.png" alt="t-shirt"  style="position:relative; left:10px;">
+</p>
+
+
+
+
+
+<p><a href="https://www.w3schools.com/css/css_positioning.asp">CSS Layout - The position Property</a> from W3Schools</p>
+
+
+
+
+
+
+
+
+<h4>CHALLENGE ACTIVITY 4.3.1: Positioning elements.#1</h4>
+
+
+
+<style>
+
+#content431-1 {
+
+   position: relative;
+   top: 6px;
+   left:-6px;
+}
+
+</style>
+
+<div>Before</div>
+<div id="content431-1">Content</div>
+<div>After</div>
+
+<br>
+
+
+
+<h4>CHALLENGE ACTIVITY 4.3.1: Positioning elements.#2</h4>
+
+<style>
+
+#content431-2 {
+
+   position: absolute;
+   top: 5px;
+   left: -6px;
+
+}
+
+</style>
+
+<div>Before</div>
+<div id="content431-2">Contentt</div>
+<div>After</div>
+
+
+
+<h4>CHALLENGE ACTIVITY 4.3.1: Positioning elements.#3</h4>
+
+
+
+
+
+<style>
+
+#content431-3 {
+   position: absolute;
+   top: 7px;
+   left: -5px;
+
+}
+
+#container431-3 {
+   position: relative;
+
+}
+
+</style>
+
+<div>Before</div>
+<div id="container431-3">
+	<div id="content431-3">Contentt</div>
+</div>
+<div>After</div>
+
+
+<h4>CHALLENGE ACTIVITY 4.3.1: Positioning elements.#4</h4>
+
+<style>
+
+img {
+   position: relative;
+   height 50px;
+}
+
+#bike {
+   left: 10px;
+   top: 10px;
+   z-index: 3;
+}
+#food {
+   left: -30px;
+   top: 30px;
+   z-index: 2;
+}
+#lake {
+   left: -80px;
+   top: 60px;
+   z-index: 1;
+}
+
+</style>
+<p>
+<img id="bike" src="https://resources.zybooks.com/WebProgramming/ducatiSmallv1.jpg" alt="A Ducati moto">
+<img id="food" src="https://resources.zybooks.com/WebProgramming/kyotoRestaurantv1.jpg" alt="A dinner">
+<img id="lake" src="https://resources.zybooks.com/WebProgramming/lake1v1.jpg" alt="Lake with a sandy">
+</p>
+
+
+<h2>4.4 Special effects</h2>
+
+
+<h3>Text shadows</h3>
+<p>CSS3, the latest version of cascading style sheets, adds a number of properties that control a web page's visual presentation. Some improvements include shadows, rounded corners, image borders, and color gradients. Shadows are added to text using the CSS property <b><i>text-shadow</b></i>, which accepts four values:</p>
+
+<ul>
+<li>offset-x - Horizontal pixel offset of shadow</li>
+<li>offset-y - Vertical pixel offset of shadow</li>
+<li>blur-radius - Optional shadow blur (default is 0)</li>
+<li>color - Optional shadow color (default is usually the current CSS color)</li>
+<br>
+The figure below illustrates how the four property values change the shadow.
+
+
+
+<h4>Figure 4.4.1: Examples of different text-shadow values.</h4>
+
+&lt;p style="text-shadow: 5px 5px"&gt;Example 1&lt;/p&gt;<br>
+&lt;p style="text-shadow: 5px 5px 1px;"&gt;Example 2&lt;/p&gt;<br>
+&lt;p style="text-shadow: -5px -5px 1px green;"&gt;Example 3&lt;/p&gt;<br>
+&lt;p style="text-shadow: 0 0 3px red;"&gt;Example 4&lt;/p&gt;<br>
+&lt;p style="text-shadow: 0 0 3px red, 0 0 6px purple;"&gt;Example 5&lt;/p&gt;<br>
+&lt;p style="text-shadow: 0 0 3px red, 0 0 6px purple;"p&gt;Two shadows&lt;p/pp&gt;<br>
+
+
+
+<p style="text-shadow: 5px 5px">Example 1</p>
+<p style="text-shadow: 5px 5px 1px;">Example 2</p>
+<p style="text-shadow: -5px -5px 1px green;">Example 3</p>
+<p style="text-shadow: 0 0 3px red;">Example 4</p>
+<p style="text-shadow: 0 0 3px red, 0 0 6px purple;">Example 5</p>
+
+<p style="text-shadow: 0 0 3px red, 0 0 6px purple;">Two shadows</p>
+
+
+<h3>Box shadows</h3>
+
+
+<p>The CSS property <b><i>box-shadow</b></i> adds a shadow to the box around an element using the following properties:</p>
+
+<ul>
+<li>inset - Optional value that draws the shadow inside the box (default is outside the box)</li>
+<li>offset-x - Horizontal pixel offset of shadow</li>
+<li>offset-y - Vertical pixel offset of shadow</li>
+<li>blur-radius - Optional shadow blur (default is 0)</li>
+<li>spread-radius - Positive value causes shadow to grow, negative values to shrink (default is 0)</li>
+<li>color - Optional shadow color (default is usually the current CSS color)</li>
+</ul>
+
+
+<h4>Figure 4.4.2: Examples of different box-shadow values.</h4>
+
+
+p {<br>
+   width: 100px;<br>
+}<br>
+#example1 {<br>
+   background-color: yellow;<br>
+   box-shadow: 5px 5px; <br>
+}<br>
+#example2 {<br>
+   background-color: green;<br>
+   box-shadow: inset 5px 5px; <br>
+}<br>
+#example3 {<br>
+   background-color: blue;<br>
+   box-shadow: -5px -5px 3px; <br>
+}<br>
+#example4 {<br>
+   background-color: violet;<br>
+   box-shadow: 5px 5px 3px 4px; <br>
+}<br>
+#example5 {<br>
+   background-color: orange;<br>
+   box-shadow: -5px -2px 3px gray, 10px 10px 5px brown; <br>
+}<br>
+
+&lt;p id="example41"&gt;Example 1&lt;/p&gt;<br>
+&lt;p id="example42"&gt;Example 2&lt;/p&gt;<br>
+&lt;p id="example43"&gt;Example 3&lt;/p&gt;<br>
+&lt;p id="example44"&gt;Example 4&lt;/p&gt;<br>
+&lt;p id="example45"&gt;Example 5&lt;/p&gt;<br>
+
+<style>
+p {
+   width: 70%;
+}
+#example41 {
+   background-color: yellow;
+   box-shadow: 5px 5px; 
+}
+#example42 {
+   background-color: green;
+   box-shadow: inset 5px 5px; 
+}
+#example43 {
+   background-color: blue;
+   box-shadow: -5px -5px 3px; 
+}
+#example44 {
+   background-color: violet;
+   box-shadow: 5px 5px 3px 4px; 
+}
+#example45 {
+   background-color: orange;
+   box-shadow: -5px -2px 3px gray, 10px 10px 5px brown; 
+}
+
+</style>
+
+
+<p id="example41">Example 1</p>
+<p id="example42">Example 2</p>
+<p id="example43">Example 3</p>
+<p id="example44">Example 4</p>
+<p id="example45">Example 5</p>
+
+
+
+
+
+
+<style>
+
+.card {
+   width: 300px;
+   background-color: #eee;
+   border: solid 1px black;
+   padding: 5px 5px;
+   margin-bottom: 10px;
+   box-shadow: 5px 1px 3px grey, 0 0 6px grey;
+}
+.question {
+   box-shadow: inset 2px 3px grey, 5px 5px 3px grey;
+   text-shadow: 1px 1px 3px black, 0 0 6px white;
+}
+.answer {
+   box-shadow:  inset 2px 3px grey, 5px 5px 3px grey;
+   text-shadow: 0 0 3px black, 0 0 6px white;
+}
+
+</style>
+
+
+
+
+
+
+
+
+<h4>PARTICIPATION ACTIVITY 4.4.3: Shadow practice.</h4>
+
+<div class="card">
+  <p class="question">Q: Who invented the WWW?</p>
+  <p class="answer">A: Tim Berners-Lee</p>
+</div>
+
+<div class="card">
+  <p class="question">Q: When was the first website published?</p>
+  <p class="answer">A: 1991</p>
+</div>
+
+<div class="card">
+  <p class="question">Q: What web browser did most people use in the early 2000s?</p>
+  <p class="answer">A: Internet Explorer</p>
+</div>
+
+
+
+
+
+
+
+<p>An element border's corners can be rounded using the CSS property <b><i>border-radius</b></i>, which is assigned one to four radius values.</p>
+
+<ul>
+<li>Single value - All four corners are equally rounded</li>
+<li>Two values - First value is top-left and bottom-right corners, second value is top-right and bottom-left corners</li>
+<li>Three values - First value is top-left, second is top-right and bottom-left, third is bottom-right</li>
+<li>Four values - First value is top-left, second is top-right, third is bottom-right, fourth is bottom-left</li>
+</ul>
+
+<p>Each corner may also be assigned a radius using four CSS properties:</p>
+
+<ul>
+<li>border-top-left-radius</li>
+<li>border-top-right-radius</li>
+<li>border-bottom-left-radius</li>
+<li>border-bottom-right-radius</li>
+</ul>
+
+
+
+
+<h3<Border images</h3>
+
+
+<p>The CSS property <b><i>border-image</b></i> renders an element's border using sections of an image. The border image takes the place of any border properties specified by border-style. The following CSS properties are specified by border-image all at once:
+</p>
+
+<ul>
+<li>border-image-source - Image URL</li>
+<li>border-image-height - Image section height</li>
+<li>border-image-width - Image section width</li>
+<li>border-image-repeat - "repeat" to repeat the image section, "round" to repeat the image section but resize the image if needed to fit, or "stretch" to stretch an image section</li>
+</ul>
+
+<h4>PARTICIPATION ACTIVITY 4.4.5: Try different border-image values.</h4>
+<style>
+
+#example445 {
+   width: 100px;
+   border: 20px solid transparent;
+   padding: 15px;
+   border-image: url(https://resources.zybooks.com/WebProgramming/borderv1.png) 31 round;
+}
+
+
+</style>
+
+<div id="example445">Example using a border image.</div>
 
 
 
@@ -1460,6 +2060,9 @@ The default behavior of a grid container can be modified with various CSS proper
 
 
 
+
+
+<section id="6. Basic JavaScript">
 <h1>6. Basic JavaScript</h1>
 
 
