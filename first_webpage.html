@@ -1850,8 +1850,8 @@ The figure below illustrates how the four property values change the shadow.
 <p style="text-shadow: -5px -5px 1px green;">Example 3</p>
 <p style="text-shadow: 0 0 3px red;">Example 4</p>
 <p style="text-shadow: 0 0 3px red, 0 0 6px purple;">Example 5</p>
-
 <p style="text-shadow: 0 0 3px red, 0 0 6px purple;">Two shadows</p>
+<p style="text-shadow: 0 0 3px lightblue, 0 0 6px blue;">Jaime</p>
 
 
 <h3>Box shadows</h3>
@@ -2013,7 +2013,7 @@ p {
 
 
 
-<h3<Border images</h3>
+<h3>Border images</h3>
 
 
 <p>The CSS property <b><i>border-image</b></i> renders an element's border using sections of an image. The border image takes the place of any border properties specified by border-style. The following CSS properties are specified by border-image all at once:
@@ -2040,6 +2040,615 @@ p {
 </style>
 
 <div id="example445">Example using a border image.</div>
+
+
+
+<p>CSS3 browser support<p>
+
+<p>Most modern browsers support CSS3, but some CSS3 properties require vendor prefixes to work on certain browsers. A <b><i>vendor prefix</b></i> is a prefix added to an experimental or nonstandard CSS property that only works on a specific browser type. Typical vendor prefixes are:</p>
+
+>ul>
+<li>    -webkit- for Chrome, Safari, and newer versions of Opera</li>
+<li>    -moz- for Firefox</li>
+<li>    -ms- for Internet Explorer</li>
+<li>    -o- for older versions of Opera</li>
+</ul>
+
+<p>The following CSS specifies a border-image property for WebKit and Opera browsers:</p>
+
+#borderimg { 
+   -webkit-border-image: url(border.png) 30 round; /* Safari 3.1-5 */
+   -o-border-image: url(border.png) 30 round; /* Opera 11-12.1 */
+   border-image: url(border.png) 30 round;
+}
+
+
+
+<h3>Linear gradients</h3>
+
+
+
+<p> A CSS background may use gradient colors that transition from one color to another. Two CSS gradients exist:</p>
+<ol>
+<li>    Linear gradient - A gradient that follows a straight line</li>
+<li>    Radial gradient - A gradient that radiates outward into an ellipse</li>
+</ol>
+<p>The CSS function <b><i>linear-gradient(color1, color2)</b></i> creates a linear gradient that transitions from color1 to color2 when moving from the top edge to the bottom edge. Additional colors can be supplied to the function. Ex: linear-gradient(red, green, blue, yellow) transitions from red to green to blue to yellow when moving from top to bottom.</p>
+
+<p>To change the gradient's direction, the first argument to linear-gradient can be a direction or an angle:</p>
+<ul>
+<li>    Direction - A direction of left, right, top, or bottom with the word to in front. Ex: to left creates a linear gradient that moves from right to left, and to bottom right goes from the top-left corner to the bottom-right corner.</li>
+<li>    Angle - A CSS angle that points in the direction of the linear gradient. The angles 0deg, 90deg, 180deg, and 270deg correspond to to top, to right, to bottom, and to left, respectively.</li>
+</ul>
+
+<p>The <b><i>repeating-linear-gradient()</b></i> function repeats a linear gradient where the color values are supplied an optional percent. The percentage value after the last color is the percent of the gradient's total length the repeating gradient should occupy. Ex: repeating-linear-gradient(red, yellow 10%) means the red to yellow gradient occupies 10% of the gradient's total length and is repeated to fill the entire background. </p>
+
+
+
+
+<h4>Figure 4.4.3: Examples of linear gradients.</h4>
+
+
+
+#example1443 {   <br>
+   background: linear-gradient(green, yellow);<br>
+}<br>
+#example2443 {   <br>
+   background: linear-gradient(to bottom right, black, red);<br>
+}<br>
+#example3443 {   <br>
+   background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet); <br> 
+}<br>
+#example4443 {   <br>
+   background: repeating-linear-gradient(to right, blue, yellow, green 20%);<br>
+}<br>
+
+
+
+&lt;div id="example1443"&gt;&lt;/div&gt;<br>
+&lt;div id="example2443"&gt;&lt;/div&gt;<br>
+&lt;div id="example3443"&gt;&lt;/div&gt;<br>
+&lt;div id="example4443"&gt;&lt;/div&gt;<br>
+
+<body>
+<style>
+
+#example1443 {   
+   background: linear-gradient(green, yellow);
+   width:100px;
+   height:100px;
+}
+#example2443 {   
+   background: linear-gradient(to bottom right, black, red);
+   width:100px;
+   height:100px;
+}
+#example3443 {   
+   background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+   width:100px;
+   height:100px;  
+}
+#example4443 {   
+   background: repeating-linear-gradient(to right, blue, yellow, green 20%);
+   width:100px;
+   height:100px;
+}
+</style>
+
+
+<p><div id="example1443">1</div></p>
+<p><div id="example2443">2</div></p>
+<p><div id="example3443">3</div></p>
+<p><div id="example4443">4</div></p>
+
+</body>
+
+
+
+
+<h3>Radial gradients</h3>
+
+
+
+ <p>A radial gradient is created with the CSS function <b><i>radial-gradient(color1, color2)</b></i>, which creates an ellipse-shaped gradient that begins with color1 in the center and ends with color2 on the perimeter. More than two colors may be specified. A percentage or length can be placed after a color to give more emphasis to the color. Ex: radial-gradient(red 10%, yellow 30%) gives more emphasis to red and yellow than the default rendering.</p>
+
+<p>The ellipse shape of a radial gradient fits the gradient's bounding rectangle. However, a circular radial gradient can be created with the circle argument. Ex: radial-gradient(circle, red, yellow) creates a circle gradient. </p>
+
+
+<h4>Figure 4.4.4: Examples of radial gradients.</h4>
+
+
+
+#example1444 {   <br>
+   background: radial-gradient(red, orange);<br>
+}<br>
+#example2444 {   <br>
+   background: radial-gradient(red, orange 50%);<br>
+}<br>
+#example3444 {   <br>
+   background: radial-gradient(red 20%, orange 50%); <br> 
+}<br>
+#example4444 {   <br>
+   background: radial-gradient(circle, red 20%, orange 50%);<br>
+}<br>
+
+
+
+&lt;div id="example1444"&gt;&lt;/div&gt;<br>
+&lt;div id="example2444"&gt;&lt;/div&gt;<br>
+&lt;div id="example3444"&gt;&lt;/div&gt;<br>
+&lt;div id="example4444"&gt;&lt;/div&gt;<br>
+
+<style>
+
+#example1444 {   
+   background: radial-gradient(red, orange);
+   width:100px;
+   height:100px;
+}
+#example2444 {   
+   background: radial-gradient(red, orange 50%);
+   width:100px;
+   height:100px;
+}
+#example3444 {   
+   background: radial-gradient(red 20%, orange 50%);
+   width:100px;
+   height:100px;
+}
+#example4444 {   
+   background: radial-gradient(circle, red 20%, orange 50%);
+   width:100px;
+   height:100px;
+}
+
+</style>
+
+
+<p><div id="example1444">1</div></p>
+<p><div id="example2444">2</div></p>
+<p><div id="example3444">3</div></p>
+<p><div id="example4444">4</div></p>
+
+
+
+<p>A radial gradient's ellipse or circle is centered by default in the enclosing rectangle, but the center position can be specified using "at centerX centerY" where centerX and centerY specify a distance or percentage. Ex: radial-gradient(at 50px 10px, yellow, green) specifies a center that is 50px from the left edge and 10px from the top.</p>
+
+<p>By default, a radial gradient's shape reaches to the farthest corner of the containing rectangle. An extent keyword describes the size of the radial gradient's shape:</p>
+<ul>
+<li>    closest-side - Circle touches the rectangle's side closest to the circle's center. Ellipse touches the vertical and horizontal sides closest to the ellipse's center.</li>
+<li>    farthest-side - Circle touches the rectangle's side farthest from the circle's center. Ellipse touches the vertical and horizontal sides farthest from the ellipse's center.</li>
+<li>    closest-corner - Circle or ellipse touches the corner closest to the shape's center.</li>
+<li>    farthest-corner - Circle or ellipse touches the corner farthest from the shape's center. (Default behavior.)</li>
+</ul>
+
+
+
+<h4> participation activity 4.4.10: Gradient practice. </h4>
+
+
+<style>
+#ad1 {   
+   font-size: 28pt;
+   background: repeating-radial-gradient(pink, yellow, lightblue 15%);
+   text-align: center;
+   width: 350px;
+   height: 60px; 
+   line-height: 60px; 
+   font-weight: bold;
+   margin-bottom: 10px;
+   width: 350px;
+   height: 60px; 
+   line-height: 60px; 
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+#ad2 {
+   background: linear-gradient(to right,  red 25%, black);
+   color: white;
+   font-size: 20pt;
+   font-family: arial;
+   font-style: italic;
+   text-align: center;
+   width: 350px;
+   height: 60px; 
+   line-height: 60px; 
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+}
+#ad3 {
+   background: repeating-linear-gradient(173deg, blue, white 13%);
+   font-size: 20pt;
+   font-family: sans-serif;
+   text-align: center;
+   width: 350px;
+   height: 60px; 
+   line-height: 60px; 
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+
+</style>
+
+<div id="ad1">Vote this Tuesday!</div>
+<div id="ad2">Buy some chocolate!</div>
+<div id="ad3">UPGRADE YOUR PHONE!</div>
+
+
+
+
+
+<h4> challenge activity 4.4.1: Special effects. Example#1: </h4>
+
+<p style= "text-shadow: rgb(0, 128, 0) 3px 11px 0px">Brevity is beautiful</p>
+
+
+
+
+<h4> challenge activity 4.4.1: Special effects. Example#2: </h4>
+<div style="border-radius:10px; background-color: blue; height: 50px;width: 50px"></div>
+
+
+<h4> challenge activity 4.4.1: Special effects. Example#3: </h4>
+
+<div style="
+   background-color: blue;
+   height: 50px;
+   width: 50px;
+   border-bottom-left-radius: 5px;
+   border-top-right-radius: 15px;"
+> </div>
+
+
+
+<h4> challenge activity 4.4.1: Special effects. Example#4: </h4>
+
+
+
+
+
+<div style="
+   height: 50px;
+   width: 50px;
+   background: linear-gradient(salmon, teal);"
+
+> </div>
+
+
+
+
+
+
+
+
+<h2>4.5 Animation</h2>
+
+
+
+<h3>Animations and keyframes</h3>
+
+<p>Developers often use JavaScript and JavaScript libraries like jQuery to produce animations. However, CSS can also be used to produce animations. A CSS animation transforms an element's styles over a set time period, producing an animation. CSS animations have three advantages over JavaScript animations:
+<ul>
+<li>    CSS animations do not require any JavaScript code.</li> 
+
+<li>    CSS animations often put less load on the computer and can use techniques to produce smoother animations when the computer's resources are limited.</li> 
+
+<li>    CSS animations allow the browser to more efficiently control animations and stop animations from running in browser tabs that are not visible.</li> 
+</ul>
+<p>A CSS animation's behavior is defined with the @keyframes rule, which contains a keyframe list. A keyframe list has a name and contains the keyframes or the properties and values that will be animated. A keyframe list contains two keyframe selectors:</p>
+<ul>
+<li>    from - The animation starting state that lists the CSS properties and values that apply when the animation begins</li> 
+<li>    to - The animation ending state that lists the CSS properties and values that the "from" values become by the time the animation ends</li> 
+</ul>
+<p>To create an animation, two CSS properties must be defined:</p>
+<ul>
+
+<li>    animation-name - Names the keyframe list associated with the animation</li>
+<li>    animation-duration - Length of the animation in seconds (s) or milliseconds (ms)</li>
+</ul>
+<p>An animation begins immediately when the browser renders the web page unless an animation-delay is used to delay the start of the animation.</p>
+
+
+<h4> participation activity 4.5.1: Animating the background color. </h4>
+
+
+<style>
+#ex451 {
+  width: 100px;
+  height: 100px;
+  background-color: orange;
+  animation-name: changeColors;
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-iteration-count: 3;
+}
+
+@keyframes changeColors {
+  from { background-color: blue;  }
+  to   { background-color: green; }
+}
+
+</style>
+
+<div id="ex451"></div>
+
+
+<h4> participation activity 4.5.3: Percentages for keyframes. </h4>
+
+
+<style>
+
+#smiley {
+   color: red;
+   font-size: 50pt;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   animation-name: move;
+   animation-duration: 3s;
+   animation-iteration-count: 3;
+}
+
+@keyframes move {
+   0%   { color:red; left:0px; top:0px; }
+   50%  { color:blue; left:200px; top:0px; }
+   100% { color:red; left:0px; top:0px; }
+}
+
+</style>
+
+
+<div id="smiley">&#9786</div>
+
+See top  of the page
+
+
+
+<h3>Timing, iteration count, and direction</h3>
+
+
+<p> In the smiley face animation above, each transition from one keyframe to the next began with a slow start, then fast, then a slow end. The <b><i>animation-timing-function</b></i> property controls an animation's speed between keyframes. Several timing functions are available:</p>
+<ul>
+<li>    ease - Slow start, then fast, then slow end (default)</li>
+<li>    linear - Same speed throughout</li>
+<li>    ease-in - Slow start</li>
+<li>    ease-out - Slow end</li>
+<li>    ease-in-out - Slow start and end</li>
+<li>    cubic-bezier(n1,n2,n3,n4) - Specify numbers that control speed based on a Bezier curve</li>
+</ul>
+
+<p>Other animation properties include:</p>
+<ul>
+<li><p>    <b><i>animation-iteration-count</b></i> - Indicates the number of times the animation will run. The value "infinite" runs the animation repeatedly without stopping. Ex: "animation-iteration-count: 3" runs the animation three times.</p></li>
+
+<li><p>    <b><i>animation-direction</b></i> - Indicates animation direction</p></li>
+<ul>
+<li>        normal - Normal direction (default)</li>
+<li>        reverse - Reverse direction</li>
+<li>        alternate - Alternate between normal and reverse</li>
+<li>        alternate-reverse - Alternate between reverse and normal</li>
+</ul>
+
+<li><p>   <b><i>animation</b></i> - Shorthand property indicating the animation name, duration, timing function, delay, iteration count, and direction. Ex: animation: move 3s linear 2s infinite normal.</p></li>
+</ul>
+
+
+<style>
+
+#thing {
+  animation: changeColors 4s ease 1s 2 reverse;
+  font-size: 50pt;
+}
+@keyframes changeColors {
+  0%   { color:red; }
+  50%  { color:blue; }
+  100% { color:green; }
+}
+
+</style>
+
+
+<div id="thing">&#9786</div>
+
+
+
+
+<h3>Transitions</h3>
+
+<p>A <b><i>CSS transition</b></i> animates an element's transition from one state to another when an element's CSS property changes value. Ex: A transition may animate an element getting wider when the element's width is increased. Transitions and are commonly used with the :hover pseudo-class to trigger an animation when the user mouses over an element.</p>
+
+<p>Transitions differ from CSS animations in two ways:</p>
+<ol>
+<li>    Transitions execute when an element's property values are changed, unlike CSS animations that execute at a particular time.</li>
+<li>    Transitions provide less control over the animation than CSS animations.<+/li>
+</ol>
+
+ <h4>participation activity 4.5.5: Transitioning the width and height when hovering. </h4>
+
+<style>
+#ex455 {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  transition: width 1s, height 1s;
+}
+
+#ex455:hover {
+  width: 120px;
+  height: 120px;
+}
+</style>
+
+<div id="ex455"></div>
+
+
+<p></p>
+
+
+<style>
+
+#ex4551 {
+  transition: opacity 500ms;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+}
+
+#ex4551:hover {
+  opacity: 0;
+}
+
+
+</style>
+
+<div id="ex4551"></div>
+
+
+<p></p>
+
+<style>
+
+#ex4552 {
+  transition: opacity 500ms;
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  transition: width 1s;
+  transition-delay: 500ms;
+}
+
+#ex4552:hover {
+  width: 80px;
+}
+
+
+</style>
+
+<div id="ex4552"></div>
+
+
+
+
+<h3>Transformations</h3>
+
+<p>The <b><i>transform</b></i> property applies a 2D or 3D transformation to an element. A <b><i>transformation</b></i> is a graphical operation that alters the position, shape, or orientation of an object. The transform property is assigned a transformation function. A selected number of 2D transformation functions are summarized in the table below.</p>
+
+
+<table style="border: solid black">
+<caption><b>Table 4.5.1: Selected 2D transformation functions.</b></caption>
+
+<tr>
+<th>Function</th>
+<th>Description</th> 	
+<th>Example</th>
+</tr>
+
+<td>translate(x, y)</td>
+<td>Moves an element on the x-axis x distance and along the y-axis y distance</td> 	
+<td>/* Moves right 10px and up 20px */translate(10px, -20px)</td>
+</tr>
+
+<td>scale(x, y)</td> 	
+<td>Increases (values > 1) or decreases (values < 1) the width and height by the x and y multiplier</td> 	
+<td>/* Halves the width, doubles the height */
+scale(0.5, 2)</td>
+</tr>
+
+<td>rotate(angle)</td> 	
+<td>Rotates clockwise by angle</td> 	
+<td>/* Rotates clockwise 45 degrees */
+rotate(45deg)</td>
+</tr>
+
+</table>
+
+
+
+<h4> participation activity 4.5.7: translate(), scale(), and rotate() transformation functions. </h4>
+
+
+<style>
+
+#ex457-1 {
+  background-color: red;
+  width: 100px;
+  height: 100px;
+  transform: translate(30px, -10px);
+  
+}
+#ex457-2 {
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+  transform: scale(1.2, 0.5);
+
+}
+#ex457-3 {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+
+}
+
+</style>
+
+<div id="ex457-1"></div>
+<div id="ex457-2"></div>
+<div id="ex457-3"></div>
+
+
+<p></p>
+
+<style>
+
+#welcome458 {
+   margin: 20px;
+   font: 20pt arial;
+   text-align: center;
+
+}
+
+.button458 {
+   margin: auto;
+   text-align: center;
+   vertical-align: middle;
+   width: 300px;
+   height: 60px; 
+   line-height: 60px;   
+   font: bold 28pt/150% arial;
+   border: solid 2px red;
+   box-shadow: 2px 2px 3px;
+   border-radius: 10px;   
+   background: radial-gradient(white, #bbb);
+   transition: all 100ms ease-in-out;   
+}
+
+.button458:hover {
+   transform: scale(1.05, 1.05);
+   color: red;  
+   cursor: pointer;
+}
+
+.button458:active {
+   background: radial-gradient(#ddd, #999);
+}
+
+</style>
+
+
+<div id="welcome458">Enter the exciting world of fantasy sports!</div>
+<div class="button458">Play Now!</div>
+
+
+
+
+
+
+
 
 
 
