@@ -2648,6 +2648,362 @@ rotate(45deg)</td>
 
 
 
+<h2>4.6 Styling forms</h2>
+
+<h3>Styling forms with CSS</h3>
+
+
+
+
+ <h4>participation activity
+4.6.1: Create a styled form. </h4>
+
+
+<style>
+
+#ex461 {
+   font: 10pt Arial;
+   background-color: #eee;
+   padding: 10px;
+}
+
+
+label.ex461  {
+   width: 50px;
+   display: inline-block;
+   text-align: right;
+   margin-right: 8px;
+}
+
+#ex461 input[type=text], select {
+   width: 350px;
+   padding: 10px;
+   margin: 6px 0;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+}
+
+#ex461 input[type=submit] {
+   width: 200px;
+   background-color: #09f;
+   color: white;
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+#ex461 input[type=submit]:hover {
+   background-color: #07d;
+}
+
+</style>
+
+<form id="ex461">
+   <div>
+      <label id="ex461" for="name">Name</label>
+      <input type="text" id="name" name="fullname">
+   </div>
+   <div>
+      <label id="ex461" for="email">Email</label>
+      <input  type="text" id="email" name="email">
+   </div>
+   <div>
+      <label id="ex461" for="service">Service</label>
+      <select  id="service" name="service">
+        <option>Basic</option>
+        <option>Prime</option>
+        <option>Deluxe</option>        
+      </select>
+   </div>
+  
+   <input id="ex461" type="submit" value="Register">
+</form>
+
+
+
+
+
+<h3>Improving text input fields</h3>
+
+
+
+ <h4>participation activity 4.6.3: Augmenting an input. </h4>
+
+<style>
+label.ex463 {
+   display: block;
+}
+
+#ex463 input[type=text], input[type=search], select {
+   width: 350px;
+   padding: 8px;
+   margin-top: 4px;
+   margin-bottom: 12px;
+   border: 1px solid #aaa;
+   border-radius: 4px;
+}
+
+input.ex463  [type=search] {
+   float: right;
+
+}
+
+#ex463 input[type=submit] {
+   width: 100%;
+   color: white;
+   background-color: #09f;
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 4px;
+   cursor: pointer;
+}
+
+#ex463 input[type=submit]:hover {
+   background-color: #07d;
+}
+
+#ex463 {
+   font: 10pt Arial;
+   background-color: #eee;
+   padding: 10px;
+   width: 380px;
+}
+#error {
+   border: 2px solid red;
+}
+input[type=text]:focus {
+   background-color: lightblue;  
+}
+
+input[type=search] {
+   float: right;
+   background-image: url("https://resources.zybooks.com/WebProgramming/searchiconv1.png");  
+   background-position: 8px 8px; 
+   background-repeat: no-repeat;
+   padding-left: 40px;
+}
+</style>
+
+<input id="ex463" type="search" placeholder="Search">
+
+<form id="ex463" action="https://wp.zybooks.com/form-viewer.php" target="_blank" method="GET">
+   <div>
+      <label id="ex463" for="name">Name</label>
+      <input type="text" id="name" name="fullname">
+   </div>
+   <div>
+      <label id="ex463" for="email">Email</label>
+      <input id="error" type="text" id="email" name="email" value="joe@gmail">
+   </div>
+   <div>
+      <label id="ex463" for="service">Service</label>
+      <select id="service" name="service">
+        <option>Basic</option>
+        <option>Prime</option>
+        <option>Deluxe</option>        
+      </select>
+   </div>
+  
+   <input id="ex463" type="submit" value="Register">
+</form>
+
+
+
+
+<h3>Styling radio buttons and checkboxes</h3>
+<section>
+<p>Radio buttons and checkboxes use the styling properties supplied by the browser and may differ between browsers. Styling radio buttons and checkboxes requires:</p>
+<ol>
+<li>    Making the radio button or checkbox's label clickable</li>
+<li>    Hiding the default radio button or checkbox</li>
+<li>    Displaying a custom radio button or checkbox before each label that changes appearance when checked or focused</li>
+</ol>
+<p>To display a custom radio button or checkbox, the ::before pseudo-element selector and content property are used to insert content before the label's content that looks like a radio button or checkbox.</p>
+
+
+
+<style>
+
+input[type=radio] + label {
+   cursor: pointer;
+}
+input[type=radio] {
+   position: absolute;
+   height: 1px; width: 1px;
+   clip: rect(0 0 1 1);
+}
+input[type=radio] + label::before {
+   content: "\00a0";  /* Non-breaking space */
+   border-radius: 10px;
+   display: inline-block;
+   width: 1em;  height: 1em; 
+   text-align: center;
+   line-height: 1em;
+   font-size: 0.8em;
+   margin-right: 10px;
+   background-color: #aaa;
+   border: 0.125em solid white;
+}
+input[type=radio]:checked + label::before {
+   content: "\2022";  /* Bullet */
+   color: white;
+   background: green;
+}
+input[type=radio]:focus + label::before {
+   box-shadow: 0 0 0 1px #888;
+}
+</section>
+<section>
+</style>
+
+<p>Size:</p>
+<div>
+  <input id="small" type="radio" name="size">
+  <label for="small">Small</label>
+</div>
+<div>
+  <input id="medium" type="radio" name="size">
+  <label for="medium">Medium</label>
+</div>
+<div>
+  <input id="large" type="radio" name="size">
+  <label for="large">Large</label>
+</div>
+
+
+<h4> participation activity 4.6.6: Style the checkboxes. </h4>
+
+<style>
+
+body {
+  font: 12pt Arial;   
+}
+
+input[type=radio] + label, input[type=checkbox]  + label {
+   cursor: pointer;
+   margin-right: 20px;
+   font-size: 16pt;
+}
+
+/* Hide radio button */
+input[type=radio], input[type=checkbox] { 
+    position: absolute; 
+    height: 1px;
+    width: 1px;
+    clip: rect(0 0 1 1); 
+}
+
+input[type=radio] + label::before {
+    content: "\00a0";
+    border-radius: 10px;
+    display: inline-block; 
+    width: 16px;
+    height: 16px;  
+    text-align: center;
+    line-height: 1em;
+    font-size: 0.8em; 
+    margin-right: 10px;
+    border: 0.125em solid white;   /* to push focus shadow away */
+    background-color: #aaa;
+    }/* Non-breaking space */
+input[type=checkbox] + label::before{
+    content: "\00a0";
+    display: inline-block; 
+    width: 16px;
+    height: 16px;  
+    text-align: center;
+    line-height: 1em;
+    font-size: 0.8em; 
+    margin-right: 10px;
+    border: 0.125em solid white;   /* to push focus shadow away */
+    background-color: #aaa;
+}
+
+input[type=radio]:checked + label::before {
+    content: "\2022";
+    color: #fff;
+    background: green;
+}
+input[type=checkbox]:checked + label::before {
+   content: "\2713";  /* Checkmark */
+   color: white;
+   background: green;      
+}
+input[type=checkbox]:checked + label::before {
+   content: "\2713";  /* Checkmark */
+   color: white;
+   background: blue;      
+}
+
+
+input[type=radio]:focus + label::before {
+    box-shadow: 0 0 0 1px gray;
+}
+input[type=radio]:focus + label::before, input[type=checkbox]:focus + label::before {
+   box-shadow: 0 0 0 1px gray;
+}
+
+</style>
+
+<p>Size:</p>
+<div>
+  <input id="a" type="radio" name="size" value="a">
+  <label for="a">A</label>
+</div>
+<div>
+  <input id="b" type="radio" name="size" value="b">
+  <label for="b">B</label>
+</div>
+<div>
+  <input id="c" type="radio" name="size" value="c">
+  <label for="c">C</label>
+</div>
+
+<p>Flavors:</p>
+<div>
+  <input id="raspberry" type="checkbox" name="flavor" value="chocolate">
+  <label for="raspberry">Raspberry</label>
+</div>
+<div>
+  <input id="grape" type="checkbox" name="flavor" value="grape">
+  <label for="grape">Grape</label>
+</div>
+<div>
+  <input id="cherry" type="checkbox" name="flavor" value="cherry">
+  <label for="cherry">Cherry</label>
+</div>
+<div>
+  <input id="root-beer" type="checkbox" name="flavor" value="rootbeer">
+  <label for="root-beer">Root Beer</label>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
